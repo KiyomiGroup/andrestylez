@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANDRESTYLEZ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">ANDRESTYLEZ</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#music">Music</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#shows">Shows</a></li>
+    <li><a href="#merch">Merch</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Now</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu-links">
+    <li><a href="#about" onclick="closeMobile()">About</a></li>
+    <li><a href="#music" onclick="closeMobile()">Music</a></li>
+    <li><a href="#videos" onclick="closeMobile()">Videos</a></li>
+    <li><a href="#shows" onclick="closeMobile()">Shows</a></li>
+    <li><a href="#merch" onclick="closeMobile()">Merch</a></li>
+    <li><a href="#contact" onclick="closeMobile()">Book</a></li>
+  </ul>
+  <div class="mobile-menu-social">
+    <a href="#">Instagram</a>
+    <a href="#">Spotify</a>
+    <a href="#">YouTube</a>
+    <a href="#">SoundCloud</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-bg">
+    <div class="hero-img-wrap">
+      <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="object-position: 30% top; transform: rotate(90deg) scale(1.8) translateX(-10%);">
+    </div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag reveal">Artist · Producer · Visionary</div>
+    <h1 class="hero-title reveal">ANDRE<br><span>STYLEZ</span></h1>
+    <p class="hero-subtitle reveal">Lagos × The World</p>
+    <p class="hero-desc reveal">Genre-defying sound. Unapologetic artistry. Music that moves between worlds and refuses to be boxed in.</p>
+    <div class="hero-actions reveal">
+      <a href="#music" class="btn-primary">Latest Drops</a>
+      <a href="#shows" class="btn-ghost">Upcoming Shows</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>ANDRESTYLEZ</span><span class="dot">◆</span>
+    <span>MUSIC THAT MOVES</span><span class="dot">◆</span>
+    <span>GENRE-DEFYING</span><span class="dot">◆</span>
+    <span>LAGOS × GLOBAL</span><span class="dot">◆</span>
+    <span>NEW MUSIC OUT NOW</span><span class="dot">◆</span>
+    <span>ANDRESTYLEZ</span><span class="dot">◆</span>
+    <span>MUSIC THAT MOVES</span><span class="dot">◆</span>
+    <span>GENRE-DEFYING</span><span class="dot">◆</span>
+    <span>LAGOS × GLOBAL</span><span class="dot">◆</span>
+    <span>NEW MUSIC OUT NOW</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid max-w">
+    <div class="about-visual reveal-left">
+      <div class="about-img-main">
+        <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="object-position: 30% top; transform: rotate(90deg) scale(2) translateX(-15%) translateY(5%);">
+      </div>
+      <div class="about-img-accent">
+        <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="object-position: 30% top; transform: rotate(90deg) scale(2.5) translateX(-15%);">
+      </div>
+      <div class="about-year">20</div>
+    </div>
+    <div class="about-text reveal-right">
+      <div class="section-label">Story</div>
+      <h2 class="section-title">THE<br>ART OF<br><span>STYLE</span></h2>
+      <p class="about-body">Andrestylez is more than a name — it's a philosophy. Born and raised in Lagos, his sound is a collision of Afrobeats, R&amp;B, and street soul that refuses genre labels.</p>
+      <p class="about-body">From late-night studio sessions to sold-out shows, every piece of music is a direct transmission from life lived fully — raw, styled, and always authentic.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">50M+</div>
+          <div class="stat-label">Streams</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">120+</div>
+          <div class="stat-label">Live Shows</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Projects</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music">
+  <div class="max-w">
+    <div class="music-header">
+      <div>
+        <div class="section-label reveal">Discography</div>
+        <h2 class="section-title reveal">LATEST<br>RELEASES</h2>
+      </div>
+      <a href="#" class="btn-ghost reveal">View All</a>
+    </div>
+
+    <div class="music-grid">
+      <div class="track-card tc1 reveal">
+        <div class="track-art">
+          <div class="track-art-inner"><span>01</span></div>
+        </div>
+        <div class="track-num">01</div>
+        <div class="track-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="track-info">
+          <div class="track-name">FADE AWAY</div>
+          <div class="track-meta">Single · 2025</div>
+        </div>
+      </div>
+      <div class="track-card tc2 reveal" style="transition-delay:.1s">
+        <div class="track-art">
+          <div class="track-art-inner"><span>02</span></div>
+        </div>
+        <div class="track-num">02</div>
+        <div class="track-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="track-info">
+          <div class="track-name">NIGHTTIME</div>
+          <div class="track-meta">EP · 2025</div>
+        </div>
+      </div>
+      <div class="track-card tc3 reveal" style="transition-delay:.2s">
+        <div class="track-art">
+          <div class="track-art-inner"><span>03</span></div>
+        </div>
+        <div class="track-num">03</div>
+        <div class="track-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="track-info">
+          <div class="track-name">LIKE WATER</div>
+          <div class="track-meta">Album · 2024</div>
+        </div>
+      </div>
+      <div class="track-card tc4 reveal" style="transition-delay:.3s">
+        <div class="track-art">
+          <div class="track-art-inner"><span>04</span></div>
+        </div>
+        <div class="track-num">04</div>
+        <div class="track-overlay">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="track-info">
+          <div class="track-name">GOLD RUSH</div>
+          <div class="track-meta">Collab · 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Track -->
+    <div class="featured-track reveal">
+      <div class="featured-vinyl" id="vinyl"></div>
+      <div class="featured-info">
+        <div class="featured-label">// Now Playing</div>
+        <div class="featured-title">FADE AWAY</div>
+        <div class="featured-sub">Andrestylez · 2025 · 3:47</div>
+        <div class="featured-actions">
+          <a href="#" class="stream-btn active">Spotify</a>
+          <a href="#" class="stream-btn">Apple Music</a>
+          <a href="#" class="stream-btn">Audiomack</a>
+          <a href="#" class="stream-btn">YouTube Music</a>
+          <a href="#" class="stream-btn">Boomplay</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos">
+  <div class="max-w">
+    <div class="section-label reveal">Visual</div>
+    <h2 class="section-title reveal">MUSIC<br>VIDEOS</h2>
+    <div class="video-grid">
+      <div class="video-card reveal">
+        <div class="video-thumb vid1">FADE</div>
+        <div class="video-overlay">
+          <div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+        <div class="video-caption">
+          <div class="video-title">FADE AWAY — Official Video</div>
+          <div class="video-sub">2025 · 4.2M Views</div>
+        </div>
+      </div>
+      <div class="video-side">
+        <div class="video-card reveal" style="transition-delay:.15s">
+          <div class="video-thumb vid2">NTE</div>
+          <div class="video-overlay">
+            <div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-caption">
+            <div class="video-title">NIGHTTIME</div>
+            <div class="video-sub">2025 · 1.8M Views</div>
+          </div>
+        </div>
+        <div class="video-card reveal" style="transition-delay:.3s">
+          <div class="video-thumb vid3">LKW</div>
+          <div class="video-overlay">
+            <div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          </div>
+          <div class="video-caption">
+            <div class="video-title">LIKE WATER</div>
+            <div class="video-sub">2024 · 3.1M Views</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHOWS -->
+<section id="shows">
+  <div class="max-w">
+    <div class="shows-header">
+      <div>
+        <div class="section-label reveal">Live</div>
+        <h2 class="section-title reveal">UPCOMING<br>/SHOWS</h2>
+      </div>
+      <a href="#" class="btn-ghost reveal">All Shows</a>
+    </div>
+    <div>
+      <div class="show-row reveal">
+        <div>
+          <div class="show-date">JUN 14</div>
+          <div class="show-date-sub">2025</div>
+        </div>
+        <div class="show-info">
+          <div class="show-venue">Eko Hotel & Suites</div>
+          <div class="show-location">Lagos, Nigeria</div>
+        </div>
+        <span class="show-tag available">On Sale</span>
+        <a href="#" class="show-ticket">Get Tickets</a>
+      </div>
+      <div class="show-row reveal" style="transition-delay:.1s">
+        <div>
+          <div class="show-date">JUL 19</div>
+          <div class="show-date-sub">2025</div>
+        </div>
+        <div class="show-info">
+          <div class="show-venue">O2 Arena</div>
+          <div class="show-location">London, UK</div>
+        </div>
+        <span class="show-tag available">On Sale</span>
+        <a href="#" class="show-ticket">Get Tickets</a>
+      </div>
+      <div class="show-row reveal" style="transition-delay:.2s">
+        <div>
+          <div class="show-date">AUG 03</div>
+          <div class="show-date-sub">2025</div>
+        </div>
+        <div class="show-info">
+          <div class="show-venue">Irving Plaza</div>
+          <div class="show-location">New York, USA</div>
+        </div>
+        <span class="show-tag sold-out">Sold Out</span>
+        <a href="#" class="show-ticket off">Sold Out</a>
+      </div>
+      <div class="show-row reveal" style="transition-delay:.3s">
+        <div>
+          <div class="show-date">AUG 22</div>
+          <div class="show-date-sub">2025</div>
+        </div>
+        <div class="show-info">
+          <div class="show-venue">Berghain</div>
+          <div class="show-location">Berlin, Germany</div>
+        </div>
+        <span class="show-tag available">On Sale</span>
+        <a href="#" class="show-ticket">Get Tickets</a>
+      </div>
+      <div class="show-row reveal" style="transition-delay:.4s">
+        <div>
+          <div class="show-date">SEP 06</div>
+          <div class="show-date-sub">2025</div>
+        </div>
+        <div class="show-info">
+          <div class="show-venue">Rex Club</div>
+          <div class="show-location">Paris, France</div>
+        </div>
+        <span class="show-tag available">On Sale</span>
+        <a href="#" class="show-ticket">Get Tickets</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="max-w">
+    <div class="section-label reveal">Visual Diary</div>
+    <h2 class="section-title reveal">GALLERY</h2>
+  </div>
+  <div class="gallery-grid" style="margin-top:48px;">
+    <div class="gal-item gi1">
+      <img class="artist-photo-gallery" src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="object-position: 30% top; transform: rotate(90deg) scale(2.5) translateX(-15%);">
+    </div>
+    <div class="gal-item gi2"><div class="gal-placeholder gp2">A</div></div>
+    <div class="gal-item gi3"><div class="gal-placeholder gp3">S</div></div>
+    <div class="gal-item gi4"><div class="gal-placeholder gp4">STYLE</div></div>
+    <div class="gal-item gi5"><div class="gal-placeholder gp5">Z</div></div>
+    <div class="gal-item gi6"><div class="gal-placeholder gp6">LDN</div></div>
+    <div class="gal-item gi7"><div class="gal-placeholder gp7">NGR</div></div>
+    <div class="gal-item gi8">
+      <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="width:100%;height:100%;object-fit:cover;object-position:30% top;transform:rotate(90deg) scale(2.8) translateX(-20%);filter:grayscale(80%) contrast(1.3);">
+    </div>
+    <div class="gal-item gi9"><div class="gal-placeholder gp9">LIVE</div></div>
+    <div class="gal-item gi10"><div class="gal-placeholder gp10">NYC</div></div>
+  </div>
+</section>
+
+<!-- MERCH -->
+<section id="merch">
+  <div class="max-w">
+    <div class="merch-intro">
+      <div class="merch-intro-left">
+        <div class="section-label reveal">Official</div>
+        <h2 class="section-title reveal">MERCH<br>DROP</h2>
+      </div>
+      <p class="merch-intro-right reveal">Wearable art from the Andrestylez universe. Limited drops, made for those who live the aesthetic.</p>
+    </div>
+    <div class="merch-grid">
+      <div class="merch-card reveal">
+        <div class="merch-img">
+          <div class="merch-img-inner mi1">A/S</div>
+          <div class="merch-label-overlay">New Drop</div>
+        </div>
+        <div class="merch-details">
+          <div>
+            <div class="merch-name">STYLEZ TEE</div>
+            <div class="merch-price">₦18,500 / $24</div>
+          </div>
+          <button class="merch-add">+</button>
+        </div>
+      </div>
+      <div class="merch-card reveal" style="transition-delay:.15s">
+        <div class="merch-img">
+          <div class="merch-img-inner mi2">LGS</div>
+          <div class="merch-label-overlay">Limited</div>
+        </div>
+        <div class="merch-details">
+          <div>
+            <div class="merch-name">LAGOS HOODIE</div>
+            <div class="merch-price">₦38,000 / $49</div>
+          </div>
+          <button class="merch-add">+</button>
+        </div>
+      </div>
+      <div class="merch-card reveal" style="transition-delay:.3s">
+        <div class="merch-img">
+          <div class="merch-img-inner mi3">WLD</div>
+          <div class="merch-label-overlay">Collab</div>
+        </div>
+        <div class="merch-details">
+          <div>
+            <div class="merch-name">WORLD TOUR CAP</div>
+            <div class="merch-price">₦12,000 / $16</div>
+          </div>
+          <button class="merch-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="#" class="btn-ghost reveal">Shop All Merch</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter">
+  <div class="newsletter-inner">
+    <div class="newsletter-text">
+      <div class="section-label">Fan Club</div>
+      <h2 class="section-title">STAY<br>CONNECTED</h2>
+      <p>Be first for new drops, exclusive content, early ticket access, and messages direct from Andrestylez.</p>
+    </div>
+    <div class="newsletter-form">
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Your email">
+      <button type="button">Join the Andrestylez List →</button>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIALS STRIP -->
+<div class="socials-strip">
+  <div class="social-links">
+    <a href="#" class="social-link">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+    <a href="#" class="social-link">
+      <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+      TikTok
+    </a>
+    <a href="#" class="social-link">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      YouTube
+    </a>
+    <a href="#" class="social-link">
+      <svg viewBox="0 0 24 24"><path d="M12.04 0C5.408 0 .002 5.404 0 12.036c0 2.122.552 4.2 1.601 6.03L.055 24l6.087-1.592a12.07 12.07 0 005.9 1.507h.005c6.63 0 12.038-5.404 12.04-12.036 0-3.213-1.252-6.232-3.524-8.505A12.016 12.016 0 0012.04 0zm0 22.013a10.06 10.06 0 01-5.122-1.4l-.368-.218-3.815.998 1.019-3.714-.24-.38a10.023 10.023 0 01-1.535-5.337c0-5.535 4.507-10.04 10.06-10.04a9.993 9.993 0 017.117 2.948 9.992 9.992 0 012.942 7.102c0 5.534-4.506 10.041-10.058 10.041z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+  <div class="social-count">
+    <span style="color:var(--white);font-family:var(--font-mono);font-size:11px;letter-spacing:2px;">50M+ STREAMS WORLDWIDE</span>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="max-w">
+    <div class="section-label reveal">Bookings & Press</div>
+    <h2 class="section-title reveal">GET IN<br>TOUCH</h2>
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <p>For bookings, press inquiries, collaborations, and brand partnerships — reach out below. All serious inquiries welcomed.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="ci-label">Booking</div>
+            <div class="ci-val">booking@andrestylez.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-label">Press</div>
+            <div class="ci-val">press@andrestylez.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-label">Management</div>
+            <div class="ci-val">mgmt@andrestylez.com</div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-label">Label</div>
+            <div class="ci-val">Independent</div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-label">Based</div>
+            <div class="ci-val">Lagos, Nigeria</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal-right">
+        <div class="form-row">
+          <div class="form-field">
+            <label>Name</label>
+            <input type="text" placeholder="Your name">
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Inquiry Type</label>
+          <select>
+            <option>Booking / Show</option>
+            <option>Press / Media</option>
+            <option>Collaboration</option>
+            <option>Brand Partnership</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Message</label>
+          <textarea placeholder="Tell me about the opportunity..."></textarea>
+        </div>
+        <button class="form-submit" type="button">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">ANDRE<br>STYLEZ</div>
+        <div class="footer-tagline">Music · Culture · Style</div>
+      </div>
+      <div class="footer-nav-group">
+        <div class="footer-nav-title">Navigate</div>
+        <ul class="footer-nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#shows">Shows</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-group">
+        <div class="footer-nav-title">Connect</div>
+        <ul class="footer-nav-links">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Spotify</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-group">
+        <div class="footer-nav-title">Legal</div>
+        <ul class="footer-nav-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Andrestylez. All rights reserved.</span>
+      <span class="footer-copy">Designed with intention.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // CURSOR
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
+  function animateRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+  document.querySelectorAll('a, button, .track-card, .video-card, .gal-item, .merch-card, .show-row').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.width = '18px'; cursor.style.height = '18px'; ring.style.width = '50px'; ring.style.height = '50px'; });
+    el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; ring.style.width = '36px'; ring.style.height = '36px'; });
+  });
+
+  // MOBILE MENU
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  let menuOpen = false;
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('open', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    hamburger.querySelectorAll('span')[0].style.transform = menuOpen ? 'rotate(45deg) translate(4px, 4px)' : '';
+    hamburger.querySelectorAll('span')[1].style.opacity = menuOpen ? '0' : '';
+    hamburger.querySelectorAll('span')[2].style.transform = menuOpen ? 'rotate(-45deg) translate(4px, -4px)' : '';
+  });
+  function closeMobile() {
+    menuOpen = false;
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+    hamburger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+  }
+
+  // VINYL SPIN on hover
+  const vinyl = document.getElementById('vinyl');
+  if (vinyl) {
+    vinyl.addEventListener('click', () => vinyl.classList.toggle('playing'));
+  }
+
+  // SCROLL REVEAL
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  // NAV SCROLL STYLE
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.background = window.scrollY > 60 ? 'rgba(8,8,8,0.95)' : 'transparent';
+  });
+
+  // HERO reveal immediately
+  document.querySelectorAll('#hero .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('in'), 200 + i * 150);
+  });
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
