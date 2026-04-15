@@ -1194,3 +1194,296 @@
   .mt8 { margin-top: 8px; }
   .max-w { max-width: 1300px; margin-left: auto; margin-right: auto; }
   a { cursor: none; }
+/* ─────────────────────────────────────────────
+   CARPETMAN-STYLE HERO OVERRIDES
+───────────────────────────────────────────── */
+
+/* Reset the old hero structure */
+#hero {
+  position: relative;
+  height: 100vh; min-height: 700px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--black);
+}
+
+/* Artist photo: right half, full bleed */
+.hero-img-panel {
+  position: absolute;
+  top: 0; right: 0;
+  width: 52%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero-artist-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: contrast(1.1) brightness(0.92);
+  transform: scale(1.04);
+  animation: heroZoom 14s ease-in-out infinite alternate;
+}
+.hero-img-vignette {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, var(--black) 0%, rgba(8,8,8,0.6) 35%, transparent 70%),
+    linear-gradient(0deg, var(--black) 0%, transparent 25%),
+    linear-gradient(180deg, rgba(8,8,8,0.4) 0%, transparent 15%);
+}
+
+/* Left content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 56px 80px;
+  max-width: 600px;
+  width: 55%;
+}
+
+.hero-eyebrow {
+  display: flex; align-items: center; gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--grey);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.eyebrow-dot {
+  width: 6px; height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(80px, 11vw, 150px);
+  line-height: 0.88;
+  letter-spacing: -2px;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.hero-title-red { color: var(--red); }
+
+.hero-tagline {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(240,237,232,0.55);
+  font-weight: 300;
+  margin-bottom: 36px;
+  max-width: 320px;
+}
+
+/* Latest release callout */
+.hero-release {
+  border-left: 2px solid var(--red);
+  padding: 12px 20px;
+  background: rgba(192,22,26,0.06);
+  margin-bottom: 36px;
+  max-width: 380px;
+}
+.hero-release-label {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.hero-release-name {
+  font-family: var(--font-display);
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-release-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--grey);
+}
+
+/* Streaming buttons row */
+.hero-stream-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+.hero-stream-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 20px;
+  transition: all .2s;
+  border: 1px solid transparent;
+  cursor: none;
+}
+.hs-spotify {
+  background: #1DB954;
+  color: #000;
+  border-color: #1DB954;
+}
+.hs-spotify:hover { background: #17a349; }
+.hs-apple {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(240,237,232,0.3);
+}
+.hs-apple:hover { border-color: var(--white); }
+.hs-audiomack {
+  background: transparent;
+  color: var(--grey);
+  border-color: rgba(240,237,232,0.12);
+}
+.hs-audiomack:hover { color: var(--white); border-color: rgba(240,237,232,0.3); }
+
+/* Shows teaser */
+.hero-shows-teaser {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--grey);
+  text-transform: uppercase;
+}
+.hero-shows-label::before { content: '→ '; color: var(--red); }
+
+/* Vertical label */
+.hero-vert-label {
+  position: absolute;
+  right: 20px; top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: rgba(240,237,232,0.2);
+  text-transform: uppercase;
+  z-index: 3;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Scroll hint */
+.hero-scroll {
+  position: absolute;
+  bottom: 36px; left: 56px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  z-index: 3;
+}
+.hero-scroll span {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--grey);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+/* ─────────────────────────────────────────────
+   NAV STREAMING BUTTONS
+───────────────────────────────────────────── */
+.nav-stream-btns {
+  display: flex; align-items: center; gap: 8px;
+  position: relative;
+}
+.nav-stream-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 14px;
+  transition: all .2s;
+  cursor: none;
+}
+.nav-stream-btn svg { flex-shrink: 0; }
+.nav-spotify {
+  background: #1DB954;
+  color: #000;
+}
+.nav-spotify:hover { background: #17a349; }
+.nav-apple {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(240,237,232,0.2);
+}
+.nav-apple:hover { border-color: var(--white); }
+
+@media (max-width: 900px) {
+  .nav-stream-btns { display: none; }
+}
+
+/* ─────────────────────────────────────────────
+   COMING SOON TAG
+───────────────────────────────────────────── */
+.coming-soon-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 2px 7px;
+  border-radius: 2px;
+  margin-left: 8px;
+  opacity: 0.85;
+  vertical-align: middle;
+}
+
+/* ─────────────────────────────────────────────
+   SHOWS COMING PLACEHOLDER
+───────────────────────────────────────────── */
+.shows-coming-placeholder {
+  margin-top: 60px;
+  text-align: center;
+}
+.scp-inner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  padding: 60px 80px;
+}
+.scp-icon {
+  font-size: 36px;
+  color: var(--red);
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.scp-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+/* ─────────────────────────────────────────────
+   HERO RESPONSIVE
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-img-panel { width: 100%; opacity: 0.35; }
+  .hero-content { width: 100%; padding: 0 24px 80px; }
+  .hero-title { font-size: clamp(64px, 18vw, 110px); }
+  .hero-stream-row { flex-direction: column; }
+  .hero-stream-btn { justify-content: center; }
+  .hero-vert-label { display: none; }
+  .scp-inner { padding: 40px 24px; }
+}
