@@ -57,3 +57,41 @@
   document.querySelectorAll('#hero .reveal').forEach((el, i) => {
     setTimeout(() => el.classList.add('in'), 200 + i * 150);
   });
+// ── DARK / LIGHT THEME TOGGLE ──────────────────────────────────
+(function() {
+  const btn = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') html.classList.add('light');
+
+  if (btn) {
+    btn.addEventListener('click', () => {
+      html.classList.toggle('light');
+      localStorage.setItem('theme', html.classList.contains('light') ? 'light' : 'dark');
+    });
+  }
+})();
+
+// ── SEND MESSAGE → MAILTO ─────────────────────────────────────
+(function() {
+  const sendBtn = document.getElementById('sendMsgBtn');
+  if (!sendBtn) return;
+  sendBtn.addEventListener('click', () => {
+    const nameEl = document.querySelector('.contact-form input[type="text"]');
+    const emailEl = document.querySelector('.contact-form input[type="email"]');
+    const typeEl = document.querySelector('.contact-form select');
+    const msgEl = document.querySelector('.contact-form textarea');
+    const name = nameEl ? nameEl.value.trim() : '';
+    const email = emailEl ? emailEl.value.trim() : '';
+    const type = typeEl ? typeEl.value : '';
+    const msg = msgEl ? msgEl.value.trim() : '';
+    const subject = encodeURIComponent((type || 'Inquiry') + ' from ' + (name || 'a fan'));
+    const body = encodeURIComponent(
+      (name ? 'Name: ' + name + '\n' : '') +
+      (email ? 'Email: ' + email + '\n' : '') +
+      (type ? 'Type: ' + type + '\n\n' : '\n') +
+      (msg || '')
+    );
+    window.location.href = 'mailto:andrestylez0017@gmail.com?subject=' + subject + '&body=' + body;
+  });
+})();

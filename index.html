@@ -23,6 +23,10 @@
     <li><a href="#merch">Merch</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -310,12 +314,10 @@
       <div class="gal-img-fallback gp4">Y</div>
     </div>
     <div class="gal-item gi5">
-      <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" class="gal-img">
-      <div class="gal-img-fallback gp5">L</div>
+      <div class="gal-mesh gm5"></div>
     </div>
     <div class="gal-item gi6">
-      <img src="assets/images/hero-artist.png" alt="Andrestylez" class="gal-img">
-      <div class="gal-img-fallback gp6">Z</div>
+      <div class="gal-mesh gm6"></div>
     </div>
     <div class="gal-item gi7"><div class="gal-placeholder gp7">LGS</div></div>
     <div class="gal-item gi8"><div class="gal-placeholder gp8">NGR</div></div>
@@ -401,8 +403,10 @@
           <div class="contact-item"><div class="ci-label">Genre</div><div class="ci-val">Afrobeats / Afrosounds</div></div>
           <div class="contact-item"><div class="ci-label">Label</div><div class="ci-val">Independent · UnitedMasters</div></div>
           <div class="contact-item"><div class="ci-label">Based</div><div class="ci-val">Lagos, Nigeria</div></div>
-          <div class="contact-item"><div class="ci-label">Booking</div><div class="ci-val">booking@andrestylez.com <span class="coming-soon-tag">Coming Soon</span></div></div>
-          <div class="contact-item"><div class="ci-label">Press</div><div class="ci-val">press@andrestylez.com <span class="coming-soon-tag">Coming Soon</span></div></div>
+          <div class="contact-item"><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:andrestylez0017@gmail.com" class="contact-link">andrestylez0017@gmail.com</a></div></div>
+          <div class="contact-item"><div class="ci-label">WhatsApp</div><div class="ci-val"><a href="https://wa.me/2347073920562" target="_blank" rel="noopener" class="contact-link">+234 707 392 0562</a></div></div>
+          <div class="contact-item"><div class="ci-label">Instagram</div><div class="ci-val"><a href="https://instagram.com/andrestylez_1" target="_blank" rel="noopener" class="contact-link">@andrestylez_1</a></div></div>
+          <div class="contact-item"><div class="ci-label">Snapchat</div><div class="ci-val"><a href="https://snapchat.com/add/andrestylez007" target="_blank" rel="noopener" class="contact-link">@andrestylez007</a></div></div>
         </div>
       </div>
       <div class="contact-form reveal-right">
@@ -421,7 +425,7 @@
           </select>
         </div>
         <div class="form-field"><label>Message</label><textarea placeholder="Tell me about the opportunity..."></textarea></div>
-        <button class="form-submit" type="button">Send Message →</button>
+        <button class="form-submit" type="button" id="sendMsgBtn">Send Message →</button>
       </div>
     </div>
   </div>

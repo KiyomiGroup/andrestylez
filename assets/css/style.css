@@ -1569,3 +1569,260 @@
   }
 }
 
+
+/* ═══════════════════════════════════════════════════════════════
+   THEME TOGGLE BUTTON
+═══════════════════════════════════════════════════════════════ */
+.theme-toggle {
+  background: none;
+  border: 1px solid rgba(240,237,232,0.2);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--white);
+  transition: border-color .2s, color .2s, background .2s;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+.theme-toggle:hover { border-color: var(--red); color: var(--red); }
+.theme-toggle svg { width: 16px; height: 16px; }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTACT LINKS
+═══════════════════════════════════════════════════════════════ */
+.contact-link {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(192,22,26,0.4);
+  transition: color .2s, border-color .2s;
+}
+.contact-link:hover { color: var(--red); border-color: var(--red); }
+
+/* ═══════════════════════════════════════════════════════════════
+   GALLERY MESH ITEMS
+═══════════════════════════════════════════════════════════════ */
+.gal-mesh {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.gm5 {
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(192,22,26,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(240,160,0,0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #0f0f0f 100%);
+}
+.gm5::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 30px, rgba(192,22,26,0.06) 30px, rgba(192,22,26,0.06) 31px),
+    repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(192,22,26,0.06) 30px, rgba(192,22,26,0.06) 31px);
+}
+.gm5::after {
+  content: 'ANDRESTYLEZ';
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: rgba(240,237,232,0.25);
+}
+.gm6 {
+  background:
+    radial-gradient(ellipse at 70% 60%, rgba(192,22,26,0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 30%, rgba(100,50,50,0.2) 0%, transparent 50%),
+    linear-gradient(225deg, #0f0f0f 0%, #150a0a 60%, #0a0a0a 100%);
+}
+.gm6::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(192,22,26,0.05) 20px, rgba(192,22,26,0.05) 21px),
+    repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(192,22,26,0.05) 20px, rgba(192,22,26,0.05) 21px);
+}
+.gm6::after {
+  content: 'LAGOS · NGR';
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: rgba(240,237,232,0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT MODE
+   Applied when <html> has class "light"
+═══════════════════════════════════════════════════════════════ */
+html.light {
+  --black: #f5f2ee;
+  --deep: #ebe8e3;
+  --white: #1a1a1a;
+  --grey: #555050;
+  --mid: #ddd9d4;
+  --border: rgba(20,20,20,0.12);
+  --red: #b01015;
+  --red-dim: #7a0b0e;
+}
+
+/* Nav in light mode */
+html.light #mainNav {
+  background: rgba(245,242,238,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(20,20,20,0.1);
+}
+html.light .nav-links a { color: #555; }
+html.light .nav-links a:hover { color: #1a1a1a; }
+html.light .nav-logo { color: #1a1a1a; }
+html.light .hamburger span { background: #1a1a1a; }
+html.light .theme-toggle { border-color: rgba(20,20,20,0.25); color: #1a1a1a; }
+html.light .theme-toggle .icon-sun { display: none; }
+html.light .theme-toggle .icon-moon { display: block; }
+
+/* Hero — keep dark so the photo works, just lighten overlays */
+html.light .hero-bg-name { -webkit-text-stroke: 1px rgba(20,20,20,0.12); }
+html.light .hero-name-main { color: #f0ede8; }
+html.light .hero-tagline-bottom { color: rgba(240,237,232,0.7); }
+html.light .hero-shows-panel { background: rgba(245,242,238,0.92); }
+html.light .hero-shows-panel * { color: #1a1a1a; }
+html.light .upcoming-label { color: #1a1a1a; }
+html.light .show-date { color: #555; }
+html.light .show-venue { color: #1a1a1a; }
+html.light .show-row { border-bottom-color: rgba(20,20,20,0.12); }
+
+/* Marquee */
+html.light .marquee { background: var(--red); }
+
+/* Sections */
+html.light #about { background: #ebe8e3; }
+html.light .about-body { color: rgba(20,20,20,0.75); }
+html.light .about-stat-num { color: #1a1a1a; }
+html.light .about-stat-label { color: #555; }
+html.light .stat-divider { background: rgba(20,20,20,0.15); }
+html.light .about-img-accent::before { background: linear-gradient(135deg, transparent 50%, #ebe8e3 100%); }
+
+/* Music section */
+html.light #music { background: #f5f2ee; }
+html.light .track-card { background: #ebe8e3; border-color: rgba(20,20,20,0.1); }
+html.light .track-card:hover { background: #e0ddd8; border-color: rgba(192,22,26,0.3); }
+html.light .track-title { color: #1a1a1a; }
+html.light .track-meta { color: #555; }
+html.light .track-tag { background: rgba(20,20,20,0.08); color: #555; }
+html.light .play-btn { background: rgba(20,20,20,0.08); color: #1a1a1a; }
+html.light .play-btn:hover { background: var(--red); color: #fff; }
+
+/* Shows */
+html.light #shows { background: #ebe8e3; }
+html.light .show-card { background: #f5f2ee; border-color: rgba(20,20,20,0.1); }
+html.light .show-card:hover { border-color: var(--red); }
+html.light .show-city { color: #1a1a1a; }
+html.light .show-country { color: #555; }
+html.light .show-tba { color: var(--red); }
+
+/* Gallery */
+html.light #gallery { background: #f5f2ee; }
+html.light .gal-img-fallback { background: #ddd9d4; color: #555; }
+html.light .gal-placeholder { background: #ddd9d4; color: #888; }
+
+/* Merch */
+html.light #merch { background: #ebe8e3; }
+html.light .merch-img-inner { background: #ddd9d4; color: #555; }
+
+/* Socials strip */
+html.light .socials-strip { background: #ebe8e3; border-color: rgba(20,20,20,0.1); }
+html.light .social-link { color: #555; }
+html.light .social-link:hover { color: var(--red); }
+
+/* Contact section */
+html.light #contact { background: #f5f2ee; }
+html.light .contact-info p { color: rgba(20,20,20,0.7); }
+html.light .ci-label { color: #888; }
+html.light .ci-val { color: #1a1a1a; }
+html.light .contact-link { color: #1a1a1a; border-bottom-color: rgba(176,16,21,0.35); }
+html.light .contact-link:hover { color: var(--red); }
+html.light .contact-item { border-bottom-color: rgba(20,20,20,0.1); }
+html.light .form-field label { color: #555; }
+html.light .form-field input,
+html.light .form-field select,
+html.light .form-field textarea { 
+  background: #ebe8e3; 
+  border-color: rgba(20,20,20,0.15); 
+  color: #1a1a1a; 
+}
+html.light .form-field input::placeholder,
+html.light .form-field textarea::placeholder { color: #aaa; }
+html.light .form-field input:focus,
+html.light .form-field select:focus,
+html.light .form-field textarea:focus { border-color: var(--red); }
+
+/* Newsletter */
+html.light .newsletter-section { background: #ebe8e3; }
+html.light .newsletter-form input { background: #f5f2ee; border-color: rgba(20,20,20,0.15); color: #1a1a1a; }
+
+/* Footer */
+html.light footer { background: #1a1a1a; }
+html.light .footer-logo { color: #f0ede8; }
+html.light .footer-tagline { color: #888; }
+html.light .footer-nav-title { color: #f0ede8; }
+html.light .footer-nav-links a { color: #888; }
+html.light .footer-nav-links a:hover { color: #f0ede8; }
+html.light .footer-copy { color: #555; }
+html.light .footer-bottom { border-top-color: rgba(240,237,232,0.08); }
+
+/* Section labels & titles in light mode */
+html.light .section-label { color: var(--red); }
+html.light .section-label::before,
+html.light .section-label::after { color: #aaa; }
+html.light .section-title { color: #1a1a1a; }
+
+/* Buttons in light mode */
+html.light .btn-ghost { color: #1a1a1a; border-color: #1a1a1a; }
+html.light .btn-ghost:hover { background: #1a1a1a; color: #f0ede8; }
+
+/* Cursor in light mode */
+html.light .cursor { background: var(--red); }
+html.light .cursor-ring { border-color: rgba(20,20,20,0.4); }
+
+/* Mobile menu */
+html.light .mobile-menu { background: rgba(245,242,238,0.98); }
+html.light .mobile-menu-links a { color: #1a1a1a; }
+html.light .mobile-menu-links a:hover { color: var(--red); }
+
+/* Videos section */
+html.light #videos { background: #ebe8e3; }
+html.light .video-card { background: #f5f2ee; border-color: rgba(20,20,20,0.1); }
+html.light .video-card:hover { border-color: var(--red); }
+html.light .video-title { color: #1a1a1a; }
+html.light .video-meta { color: #555; }
+
+/* Switch icon: show sun in light mode, hide moon */
+html.light .theme-toggle .icon-moon { display: none; }
+html.light .theme-toggle .icon-sun { display: block; }
+html.light .theme-toggle { border-color: rgba(20,20,20,0.25); color: #555; }
+html.light .theme-toggle:hover { color: var(--red); border-color: var(--red); }
+
+/* Smooth transitions for theme switch */
+body, #mainNav, section, .track-card, .show-card, .contact-item,
+.form-field input, .form-field select, .form-field textarea,
+.gal-placeholder, .merch-img-inner, .social-link, footer {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Make nav display flex so toggle sits nicely */
+#mainNav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
