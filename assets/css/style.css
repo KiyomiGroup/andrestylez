@@ -1826,3 +1826,306 @@ body, #mainNav, section, .track-card, .show-card, .contact-item,
   align-items: center;
   gap: 0;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE OPTIMIZATION — COMPREHENSIVE FIX
+   Prevents all horizontal overflow, ensures everything fits
+   within the viewport on phones without zooming or scrolling.
+═══════════════════════════════════════════════════════════════ */
+
+/* 1. Hard clamp entire page to screen width */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+  /* ── Global ── */
+  * { max-width: 100%; }
+
+  /* Sections get tighter side padding on mobile */
+  section { padding: 64px 20px; }
+
+  /* ── NAV ── */
+  nav {
+    padding: 14px 20px !important;
+    gap: 8px;
+  }
+  .nav-logo { font-size: 18px; letter-spacing: 2px; }
+  .theme-toggle { width: 32px; height: 32px; margin-right: 4px; }
+  .hamburger { cursor: pointer; }
+
+  /* ── HERO: fix the two floating panels overflowing ── */
+  #hero { min-height: 100svh; }
+
+  /* Shows panel — smaller and constrained */
+  .hero-shows-panel {
+    top: 60px;
+    left: 12px;
+    right: auto;
+    min-width: 0;
+    max-width: calc(50vw - 16px);
+    padding: 10px 12px;
+  }
+  .hsp-title { font-size: 7px; letter-spacing: 1.5px; }
+  .hsp-row { font-size: 7px; gap: 8px; }
+  .hsp-loc { font-size: 7px; }
+
+  /* Stream pills — constrained to right side */
+  .hero-stream-pills {
+    top: 60px;
+    right: 12px;
+    left: auto;
+    max-width: calc(50vw - 16px);
+    gap: 5px;
+  }
+  .stream-pill {
+    font-size: 8px;
+    padding: 5px 8px;
+    white-space: nowrap;
+  }
+
+  /* Hero bottom block */
+  .hero-bottom {
+    padding: 0 16px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-name-main {
+    font-size: clamp(28px, 9vw, 52px);
+    letter-spacing: 1px;
+  }
+  .hero-tagline-bottom {
+    font-size: 8px;
+    max-width: 100%;
+    letter-spacing: 1.5px;
+  }
+  .hero-listen-btn {
+    padding: 11px 20px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  .about-visual { height: 320px; }
+
+  /* ── MUSIC ── */
+  .music-grid { grid-template-columns: 1fr !important; }
+  .featured-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  /* ── SHOWS ── */
+  .show-row {
+    grid-template-columns: 70px 1fr !important;
+    gap: 10px;
+    padding: 14px 0;
+  }
+
+  /* ── VIDEOS ── */
+  .video-grid { grid-template-columns: 1fr !important; }
+  .video-side { flex-direction: column !important; }
+
+  /* ── GALLERY ── */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: none !important;
+  }
+  .gi1,.gi2,.gi3,.gi4,.gi5,.gi6,.gi7,.gi8,.gi9,.gi10 {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 160px;
+  }
+
+  /* ── MERCH ── */
+  .merch-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* ── NEWSLETTER ── */
+  .newsletter-inner { grid-template-columns: 1fr !important; gap: 32px; }
+  #newsletter::before { display: none; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input,
+  .newsletter-form button { width: 100%; }
+
+  /* ── CONTACT ── */
+  .contact-grid { grid-template-columns: 1fr !important; gap: 40px; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .form-field input,
+  .form-field select,
+  .form-field textarea { width: 100%; box-sizing: border-box; }
+
+  /* ── SHOWS PLACEHOLDER ── */
+  .scp-inner { padding: 40px 20px; }
+
+  /* ── FOOTER ── */
+  .footer-top { flex-direction: column; gap: 32px; }
+  .footer-logo { font-size: 42px; }
+  .footer-inner { padding: 48px 20px 24px; }
+  .socials-strip { flex-direction: column; align-items: flex-start; gap: 16px; }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu-links a { font-size: clamp(28px, 9vw, 44px); }
+
+  /* ── SECTION TITLES ── */
+  .section-title { font-size: clamp(40px, 10vw, 64px); }
+
+  /* Disable custom cursor on touch devices */
+  .cursor, .cursor-ring { display: none !important; }
+  body { cursor: auto; }
+  a, button, [class*="btn"], .track-card, .video-card,
+  .merch-card, .gal-item, .show-row, .hsp-arrow,
+  .stream-pill, .hero-listen-btn, .form-submit,
+  .hamburger, .theme-toggle { cursor: pointer !important; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 12px 16px !important; }
+  .nav-logo { font-size: 16px; letter-spacing: 1.5px; }
+
+  section { padding: 56px 16px; }
+
+  .hero-shows-panel { max-width: calc(48vw - 12px); }
+  .hero-stream-pills { max-width: calc(48vw - 12px); }
+  .stream-pill { font-size: 7px; padding: 5px 7px; }
+
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .music-grid { grid-template-columns: 1fr !important; }
+  .merch-grid { grid-template-columns: 1fr !important; }
+
+  .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .gi1,.gi2,.gi3,.gi4,.gi5,.gi6,.gi7,.gi8,.gi9,.gi10 {
+    height: 200px;
+  }
+
+  .footer-logo { font-size: 36px; }
+  .mobile-menu-links a { font-size: clamp(24px, 8vw, 36px); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE POLISH — PASS 2
+   Fixes remaining overflow sources & interaction issues
+═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ── Fix global cursor:none on links (breaks touch taps) ── */
+  a, button { cursor: pointer !important; }
+
+  /* ── Featured track ── */
+  .featured-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+  .featured-vinyl { width: 80px; height: 80px; }
+  .featured-title { font-size: 28px; }
+  .featured-sub { font-size: 9px; letter-spacing: 1px; word-break: break-word; }
+  .featured-actions { gap: 8px; }
+  .stream-btn { font-size: 8px; padding: 7px 12px; cursor: pointer !important; }
+
+  /* ── Section label ── */
+  .section-label { font-size: 9px; letter-spacing: 2px; }
+
+  /* ── About stats ── */
+  .about-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* ── Shows section ── */
+  .show-row {
+    grid-template-columns: 64px 1fr !important;
+    gap: 8px;
+    padding: 14px 0;
+  }
+  .show-date { font-size: 22px; }
+  .show-tag { display: none; }
+  .show-venue, .show-city { font-size: 11px; }
+  .show-cta { font-size: 9px; padding: 6px 12px; }
+
+  /* ── Videos ── */
+  .video-grid { grid-template-columns: 1fr !important; }
+  .video-side { flex-direction: column !important; }
+  .video-thumb { height: 200px; }
+
+  /* ── Merch cards ── */
+  .merch-img { height: 220px; }
+  .merch-name { font-size: 14px; }
+
+  /* ── Socials strip ── */
+  .socials-strip {
+    padding: 32px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .social-links { flex-wrap: wrap; gap: 16px; }
+
+  /* ── Footer ── */
+  footer { padding: 48px 20px 32px; }
+  .footer-inner { padding: 0; }
+  .footer-top {
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 32px;
+  }
+  .footer-logo { font-size: 40px; line-height: 1; }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+  }
+  .footer-copy { font-size: 10px; }
+
+  /* ── Mobile menu padding fix ── */
+  .mobile-menu { padding: 90px 32px 40px; }
+  .mobile-menu-links { gap: 2px; }
+
+  /* ── SCP (coming soon) inner ── */
+  .scp-inner { padding: 36px 20px; }
+  .scp-text { font-size: 10px; letter-spacing: 2px; }
+
+  /* ── Newsletter ── */
+  .newsletter-form input { font-size: 13px; }
+  #newsletter { padding: 64px 20px; }
+
+  /* ── Contact section ── */
+  #contact .contact-form { gap: 16px; }
+  #contact .btn-primary,
+  #contact .btn-ghost { max-width: 100% !important; width: 100%; box-sizing: border-box; text-align: center; }
+
+  /* ── Hero bg name — prevent overflow ── */
+  .hero-bg-name {
+    font-size: clamp(40px, 13vw, 80px) !important;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ── Marquee — ensure it doesn't cause scroll ── */
+  .marquee-bar { overflow: hidden; }
+
+  /* ── Max width guard for all images ── */
+  img { max-width: 100%; height: auto; }
+}
+
+@media (max-width: 480px) {
+  /* ── Tightest phones ── */
+  .hero-shows-panel { display: none; } /* hide on very small screens to give hero breathing room */
+  .hero-stream-pills { top: 60px; right: 10px; }
+  .stream-pill { font-size: 7px; padding: 4px 7px; gap: 4px; }
+  .featured-track { padding: 20px 16px; }
+  .featured-actions { flex-wrap: wrap; }
+  .socials-strip { padding: 24px 16px; }
+  footer { padding: 40px 16px 28px; }
+  .mobile-menu { padding: 80px 24px 32px; }
+}
