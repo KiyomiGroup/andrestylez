@@ -10,11 +10,9 @@
 </head>
 <body>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- NAV -->
 <nav id="mainNav">
   <a href="#" class="nav-logo">ANDRESTYLEZ</a>
   <ul class="nav-links">
@@ -25,13 +23,11 @@
     <li><a href="#merch">Merch</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <ul class="mobile-menu-links">
     <li><a href="#about" onclick="closeMobile()">About</a></li>
@@ -48,22 +44,24 @@
   </div>
 </div>
 
-<!-- HERO — Carpetman-style: name behind image, full-bleed photo, overlaid content -->
+<!-- ═══════════════════════════════════════
+ HERO
+ hero-bg-texture.png  → warm atmospheric BG (fills entire hero behind everything)
+ hero-artist.png      → artist portrait, centred, bottom-anchored, full height
+════════════════════════════════════════ -->
 <section id="hero">
-
-  <!-- Texture / atmospheric background -->
-  <div class="hero-texture-bg"></div>
-
-  <!-- Giant name behind everything -->
+  <!-- Layer 1: warm atmospheric texture -->
+  <div class="hero-texture-bg">
+    <img src="assets/images/hero-bg-texture.png" alt="" aria-hidden="true">
+  </div>
+  <!-- Layer 2: giant name watermark -->
   <div class="hero-bg-name" aria-hidden="true">ANDRESTYLEZ</div>
-
-  <!-- Full-bleed artist photo -->
+  <!-- Layer 3: artist portrait + vignette -->
   <div class="hero-img-panel">
     <img src="assets/images/hero-artist.png" alt="Andrestylez" class="hero-artist-img">
     <div class="hero-img-vignette"></div>
   </div>
-
-  <!-- TOP-RIGHT: Streaming pills (desktop & mobile) -->
+  <!-- Streaming pills top-right -->
   <div class="hero-stream-pills">
     <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ?si=KiUqcF86RhSm_cYwI0UJSg" target="_blank" rel="noopener" class="stream-pill pill-spotify">
       <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
@@ -74,8 +72,7 @@
       [ Apple Music ]
     </a>
   </div>
-
-  <!-- TOP-LEFT: Upcoming shows panel -->
+  <!-- Shows panel top-left -->
   <div class="hero-shows-panel">
     <div class="hsp-header">
       <span class="hsp-title">UPCOMING<br>SHOWS</span>
@@ -86,26 +83,22 @@
       <div class="hsp-row"><span class="hsp-date">TBA</span><span class="hsp-loc">Lagos, Nigeria</span></div>
     </div>
   </div>
-
-  <!-- BOTTOM: Name + tagline -->
+  <!-- Bottom: name + tagline + CTA -->
   <div class="hero-bottom">
     <div class="hero-name-block">
       <h1 class="hero-name-main">ANDRESTYLEZ</h1>
-      <p class="hero-tagline-bottom">ANDRESTYLEZ — MUSIC THAT HITS DIFFERENT. YOU WON'T HEAR THIS ON TV.</p>
+      <p class="hero-tagline-bottom">Music that hits different. You won't hear this on TV.</p>
     </div>
     <div class="hero-bottom-cta">
       <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ?si=KiUqcF86RhSm_cYwI0UJSg" target="_blank" rel="noopener" class="hero-listen-btn">LISTEN NOW <span class="listen-arrow">↗</span></a>
     </div>
   </div>
-
-  <!-- Scroll indicator -->
   <div class="hero-scroll">
     <div class="scroll-line"></div>
     <span>↓</span>
   </div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee-bar">
   <div class="marquee-track">
     <span>ANDRESTYLEZ</span><span class="dot">◆</span>
@@ -121,15 +114,19 @@
   </div>
 </div>
 
-<!-- ABOUT -->
+<!-- ═══════════════════════════════════════
+ ABOUT
+ about-main.jpg   → main tall portrait, left column, object-fit:cover, top-anchored
+ about-accent.jpg → overlapping accent frame (55%x55%), red border, greyscale tint
+════════════════════════════════════════ -->
 <section id="about">
   <div class="about-grid max-w">
     <div class="about-visual reveal-left">
       <div class="about-img-main">
-        <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="width:100%;height:100%;object-fit:cover;object-position:top center;filter:contrast(1.05);">
+        <img src="assets/images/about-main.jpg" alt="Andrestylez">
       </div>
       <div class="about-img-accent">
-        <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(60%) contrast(1.2);">
+        <img src="assets/images/about-accent.jpg" alt="Andrestylez">
       </div>
       <div class="about-year">26</div>
     </div>
@@ -139,24 +136,21 @@
       <p class="about-body">Andrestylez is more than a name — it's a philosophy. Born and raised in Lagos, Nigeria, his sound is a fusion of Afrobeats, R&amp;B, and street soul that refuses genre labels.</p>
       <p class="about-body">Versatile and unapologetic, every track is a direct transmission from life lived fully — raw, styled, and always authentic. From his debut cuts to the latest drop <em>ĆǍŅÂ</em> (2026), Andrestylez is carving his own lane on the global stage.</p>
       <div class="about-stats">
-        <div class="stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Releases</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">2022</div>
-          <div class="stat-label">Since</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">LGS</div>
-          <div class="stat-label">Lagos-Based</div>
-        </div>
+        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Releases</div></div>
+        <div class="stat"><div class="stat-num">2022</div><div class="stat-label">Since</div></div>
+        <div class="stat"><div class="stat-num">LGS</div><div class="stat-label">Lagos-Based</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MUSIC -->
+<!-- ═══════════════════════════════════════
+ MUSIC
+ cover-cana.jpg        → square 1:1, fills track card 01 face completely
+ cover-mariana.jpg     → square 1:1, fills track card 02 face completely
+ cover-incantation.jpg → square 1:1, fills track card 03 face completely
+ Fallback gradient shown if image is missing.
+════════════════════════════════════════ -->
 <section id="music">
   <div class="max-w">
     <div class="music-header">
@@ -166,11 +160,11 @@
       </div>
       <a href="https://audiomack.com/Andrestylez/songs" target="_blank" class="btn-ghost reveal">View All</a>
     </div>
-
     <div class="music-grid">
+
       <div class="track-card tc1 reveal">
         <div class="track-art">
-          <div class="track-art-inner" style="background: linear-gradient(135deg, #1a0a2e 0%, #6b21a8 100%); display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:26px;color:rgba(226,192,255,0.8);">ĆǍŅÂ</div>
+          <img src="assets/images/cover-cana.jpg" alt="ĆǍŅÂ" class="track-cover-img">
         </div>
         <div class="track-num">01</div>
         <div class="track-overlay">
@@ -181,9 +175,10 @@
           <div class="track-meta">Single · April 2026</div>
         </div>
       </div>
+
       <div class="track-card tc2 reveal" style="transition-delay:.1s">
         <div class="track-art">
-          <div class="track-art-inner" style="background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:22px;color:rgba(125,211,252,0.8);">MARIANA</div>
+          <img src="assets/images/cover-mariana.jpg" alt="Mariana" class="track-cover-img">
         </div>
         <div class="track-num">02</div>
         <div class="track-overlay">
@@ -194,9 +189,10 @@
           <div class="track-meta">Single · 2025</div>
         </div>
       </div>
+
       <div class="track-card tc3 reveal" style="transition-delay:.2s">
         <div class="track-art">
-          <div class="track-art-inner" style="background: linear-gradient(135deg, #1a0505 0%, #7f1d1d 100%); display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;color:rgba(252,165,165,0.8);text-align:center;letter-spacing:1px;">INCAN<br>TATION</div>
+          <img src="assets/images/cover-incantation.jpg" alt="Incantation" class="track-cover-img">
         </div>
         <div class="track-num">03</div>
         <div class="track-overlay">
@@ -207,10 +203,11 @@
           <div class="track-meta">Single · 2024</div>
         </div>
       </div>
+
     </div>
 
     <div class="featured-track reveal">
-      <div class="featured-vinyl" id="vinyl" style="background: radial-gradient(circle at 30% 30%, #9333ea, #1a0a2e 70%);"></div>
+      <div class="featured-vinyl" id="vinyl"></div>
       <div class="featured-info">
         <div class="featured-label">// Now Streaming</div>
         <div class="featured-title">ĆǍŅÂ</div>
@@ -226,17 +223,14 @@
   </div>
 </section>
 
-<!-- VIDEOS -->
 <section id="videos">
   <div class="max-w">
     <div class="section-label reveal">Visual</div>
     <h2 class="section-title reveal">MUSIC<br>VIDEOS <span class="coming-soon-tag" style="font-size:13px;vertical-align:middle;">Coming Soon</span></h2>
     <div class="video-grid">
       <div class="video-card reveal">
-        <div class="video-thumb vid1" style="background:linear-gradient(135deg,#1a0a2e 0%,#6b21a8 100%);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:52px;color:rgba(255,255,255,0.12);">ĆǍŅÂ</div>
-        <div class="video-overlay">
-          <div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        </div>
+        <div class="video-thumb vid1">ĆǍŅÂ</div>
+        <div class="video-overlay"><div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         <div class="video-caption">
           <div class="video-title">ĆǍŅÂ — Official Video <span class="coming-soon-tag">Coming Soon</span></div>
           <div class="video-sub">2026</div>
@@ -244,20 +238,16 @@
       </div>
       <div class="video-side">
         <div class="video-card reveal" style="transition-delay:.15s">
-          <div class="video-thumb vid2" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 100%);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:32px;color:rgba(255,255,255,0.12);">MARIANA</div>
-          <div class="video-overlay">
-            <div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          <div class="video-thumb vid2">MARIANA</div>
+          <div class="video-overlay"><div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           <div class="video-caption">
             <div class="video-title">MARIANA <span class="coming-soon-tag">Coming Soon</span></div>
             <div class="video-sub">2025</div>
           </div>
         </div>
         <div class="video-card reveal" style="transition-delay:.3s">
-          <div class="video-thumb vid3" style="background:linear-gradient(135deg,#1a0505 0%,#7f1d1d 100%);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:20px;color:rgba(255,255,255,0.12);">INCANTATION</div>
-          <div class="video-overlay">
-            <div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-          </div>
+          <div class="video-thumb vid3">INCANTATION</div>
+          <div class="video-overlay"><div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           <div class="video-caption">
             <div class="video-title">INCANTATION <span class="coming-soon-tag">Coming Soon</span></div>
             <div class="video-sub">2024</div>
@@ -268,7 +258,6 @@
   </div>
 </section>
 
-<!-- SHOWS -->
 <section id="shows">
   <div class="max-w">
     <div class="shows-header">
@@ -287,31 +276,54 @@
   </div>
 </section>
 
-<!-- GALLERY -->
+<!-- ═══════════════════════════════════════
+ GALLERY
+ gallery-1.jpg → gi1  (large, 4 cols × 2 rows — dominant left slot)
+ gallery-2.jpg → gi2  (medium, 3 cols × 1 row — top middle)
+ gallery-3.jpg → gi3  (medium, 2 cols × 1 row — top right-mid)
+ gallery-4.jpg → gi4  (large, 3 cols × 2 rows — right column)
+ gallery-5.jpg → gi5  (medium, 2 cols × 1 row — mid left)
+ gallery-6.jpg → gi6  (medium, 3 cols × 1 row — mid right)
+ gi7–gi10 are styled text tiles (no image needed).
+ All images: object-fit:cover, object-position:top center, grayscale 30%.
+════════════════════════════════════════ -->
 <section id="gallery">
   <div class="max-w">
     <div class="section-label reveal">Visual Diary</div>
-    <h2 class="section-title reveal">GALLERY <span class="coming-soon-tag" style="font-size:13px;vertical-align:middle;">Coming Soon</span></h2>
+    <h2 class="section-title reveal">GALLERY</h2>
   </div>
-  <div class="gallery-grid" style="margin-top:48px;">
+  <div class="gallery-grid">
     <div class="gal-item gi1">
-      <img class="artist-photo-gallery" src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="width:100%;height:100%;object-fit:cover;object-position:top center;filter:contrast(1.1);">
+      <img src="assets/images/gallery-1.jpg" alt="Andrestylez" class="gal-img">
+      <div class="gal-img-fallback gp1">A</div>
     </div>
-    <div class="gal-item gi2"><div class="gal-placeholder gp2">A</div></div>
-    <div class="gal-item gi3"><div class="gal-placeholder gp3">S</div></div>
-    <div class="gal-item gi4"><div class="gal-placeholder gp4">STYLE</div></div>
-    <div class="gal-item gi5"><div class="gal-placeholder gp5">Z</div></div>
-    <div class="gal-item gi6"><div class="gal-placeholder gp6">LGS</div></div>
-    <div class="gal-item gi7"><div class="gal-placeholder gp7">NGR</div></div>
-    <div class="gal-item gi8">
-      <img src="assets/images/IMG_0084.jpeg" alt="Andrestylez" style="width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(80%) contrast(1.3);">
+    <div class="gal-item gi2">
+      <img src="assets/images/gallery-2.jpg" alt="Andrestylez" class="gal-img">
+      <div class="gal-img-fallback gp2">S</div>
     </div>
+    <div class="gal-item gi3">
+      <img src="assets/images/gallery-3.jpg" alt="Andrestylez" class="gal-img">
+      <div class="gal-img-fallback gp3">T</div>
+    </div>
+    <div class="gal-item gi4">
+      <img src="assets/images/gallery-4.jpg" alt="Andrestylez" class="gal-img">
+      <div class="gal-img-fallback gp4">Y</div>
+    </div>
+    <div class="gal-item gi5">
+      <img src="assets/images/gallery-5.jpg" alt="Andrestylez" class="gal-img">
+      <div class="gal-img-fallback gp5">L</div>
+    </div>
+    <div class="gal-item gi6">
+      <img src="assets/images/gallery-6.jpg" alt="Andrestylez" class="gal-img">
+      <div class="gal-img-fallback gp6">Z</div>
+    </div>
+    <div class="gal-item gi7"><div class="gal-placeholder gp7">LGS</div></div>
+    <div class="gal-item gi8"><div class="gal-placeholder gp8">NGR</div></div>
     <div class="gal-item gi9"><div class="gal-placeholder gp9">LIVE</div></div>
     <div class="gal-item gi10"><div class="gal-placeholder gp10">2026</div></div>
   </div>
 </section>
 
-<!-- MERCH -->
 <section id="merch">
   <div class="max-w">
     <div class="merch-intro">
@@ -323,40 +335,22 @@
     </div>
     <div class="merch-grid">
       <div class="merch-card reveal">
-        <div class="merch-img">
-          <div class="merch-img-inner mi1">A/S</div>
-          <div class="merch-label-overlay">Coming Soon</div>
-        </div>
-        <div class="merch-details">
-          <div><div class="merch-name">STYLEZ TEE</div><div class="merch-price">TBA</div></div>
-        </div>
+        <div class="merch-img"><div class="merch-img-inner mi1">A/S</div><div class="merch-label-overlay">Coming Soon</div></div>
+        <div class="merch-details"><div><div class="merch-name">STYLEZ TEE</div><div class="merch-price">TBA</div></div></div>
       </div>
       <div class="merch-card reveal" style="transition-delay:.15s">
-        <div class="merch-img">
-          <div class="merch-img-inner mi2">LGS</div>
-          <div class="merch-label-overlay">Coming Soon</div>
-        </div>
-        <div class="merch-details">
-          <div><div class="merch-name">LAGOS HOODIE</div><div class="merch-price">TBA</div></div>
-        </div>
+        <div class="merch-img"><div class="merch-img-inner mi2">LGS</div><div class="merch-label-overlay">Coming Soon</div></div>
+        <div class="merch-details"><div><div class="merch-name">LAGOS HOODIE</div><div class="merch-price">TBA</div></div></div>
       </div>
       <div class="merch-card reveal" style="transition-delay:.3s">
-        <div class="merch-img">
-          <div class="merch-img-inner mi3">ĆǍŅ</div>
-          <div class="merch-label-overlay">Coming Soon</div>
-        </div>
-        <div class="merch-details">
-          <div><div class="merch-name">ĆǍŅÂ CAP</div><div class="merch-price">TBA</div></div>
-        </div>
+        <div class="merch-img"><div class="merch-img-inner mi3">ĆǍŅ</div><div class="merch-label-overlay">Coming Soon</div></div>
+        <div class="merch-details"><div><div class="merch-name">ĆǍŅÂ CAP</div><div class="merch-price">TBA</div></div></div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="#contact" class="btn-ghost reveal">Stay Updated</a>
-    </div>
+    <div style="text-align:center;margin-top:40px;"><a href="#contact" class="btn-ghost reveal">Stay Updated</a></div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
 <section id="newsletter">
   <div class="newsletter-inner">
     <div class="newsletter-text">
@@ -372,7 +366,6 @@
   </div>
 </section>
 
-<!-- SOCIALS STRIP -->
 <div class="socials-strip">
   <div class="social-links">
     <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ" target="_blank" class="social-link">
@@ -397,7 +390,6 @@
   </div>
 </div>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="max-w">
     <div class="section-label reveal">Bookings &amp; Press</div>
@@ -406,38 +398,17 @@
       <div class="contact-info reveal-left">
         <p>For bookings, press inquiries, collaborations, and brand partnerships — reach out below. All serious inquiries welcomed.</p>
         <div class="contact-items">
-          <div class="contact-item">
-            <div class="ci-label">Genre</div>
-            <div class="ci-val">Afrobeats / Afrosounds</div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-label">Label</div>
-            <div class="ci-val">Independent · UnitedMasters</div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-label">Based</div>
-            <div class="ci-val">Lagos, Nigeria</div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-label">Booking</div>
-            <div class="ci-val">booking@andrestylez.com <span class="coming-soon-tag">Coming Soon</span></div>
-          </div>
-          <div class="contact-item">
-            <div class="ci-label">Press</div>
-            <div class="ci-val">press@andrestylez.com <span class="coming-soon-tag">Coming Soon</span></div>
-          </div>
+          <div class="contact-item"><div class="ci-label">Genre</div><div class="ci-val">Afrobeats / Afrosounds</div></div>
+          <div class="contact-item"><div class="ci-label">Label</div><div class="ci-val">Independent · UnitedMasters</div></div>
+          <div class="contact-item"><div class="ci-label">Based</div><div class="ci-val">Lagos, Nigeria</div></div>
+          <div class="contact-item"><div class="ci-label">Booking</div><div class="ci-val">booking@andrestylez.com <span class="coming-soon-tag">Coming Soon</span></div></div>
+          <div class="contact-item"><div class="ci-label">Press</div><div class="ci-val">press@andrestylez.com <span class="coming-soon-tag">Coming Soon</span></div></div>
         </div>
       </div>
       <div class="contact-form reveal-right">
         <div class="form-row">
-          <div class="form-field">
-            <label>Name</label>
-            <input type="text" placeholder="Your name">
-          </div>
-          <div class="form-field">
-            <label>Email</label>
-            <input type="email" placeholder="your@email.com">
-          </div>
+          <div class="form-field"><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div class="form-field"><label>Email</label><input type="email" placeholder="your@email.com"></div>
         </div>
         <div class="form-field">
           <label>Inquiry Type</label>
@@ -449,17 +420,13 @@
             <option>Other</option>
           </select>
         </div>
-        <div class="form-field">
-          <label>Message</label>
-          <textarea placeholder="Tell me about the opportunity..."></textarea>
-        </div>
+        <div class="form-field"><label>Message</label><textarea placeholder="Tell me about the opportunity..."></textarea></div>
         <button class="form-submit" type="button">Send Message →</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">

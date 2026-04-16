@@ -1378,3 +1378,195 @@
 
   .scp-inner { padding: 40px 24px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   IMAGE HANDLING — all named image files, sizes & treatments
+   ─────────────────────────────────────────────────────────────
+   File map (all go in assets/images/):
+     hero-bg-texture.png   → hero background warm glow
+     hero-artist.png       → hero foreground portrait
+     about-main.jpg        → about section main portrait
+     about-accent.jpg      → about section accent/overlap photo
+     cover-cana.jpg        → ĆǍŅÂ track card cover (1:1 square)
+     cover-mariana.jpg     → Mariana track card cover (1:1 square)
+     cover-incantation.jpg → Incantation track card cover (1:1 square)
+     gallery-1.jpg         → gallery slot gi1 (large, 4col×2row)
+     gallery-2.jpg         → gallery slot gi2 (medium)
+     gallery-3.jpg         → gallery slot gi3 (medium)
+     gallery-4.jpg         → gallery slot gi4 (large, 3col×2row)
+     gallery-5.jpg         → gallery slot gi5 (medium)
+     gallery-6.jpg         → gallery slot gi6 (medium)
+════════════════════════════════════════════════════════════════ */
+
+/* ─── HERO TEXTURE BACKGROUND ─────────────────────────────────
+   hero-bg-texture.png fills the entire hero, behind everything.
+   Warm amber/moody atmospheric feel. Opacity 0.65 lets the black
+   base show through for depth. Cover + center keeps focal warmth centred.
+──────────────────────────────────────────────────────────────── */
+.hero-texture-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-texture-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.65;
+  display: block;
+}
+
+/* ─── HERO ARTIST PORTRAIT ────────────────────────────────────
+   hero-artist.png sits on z-index 2, above texture, below UI.
+   Bottom-anchored so feet/base touch the hero floor.
+   max-width: 62% on desktop keeps space for bottom-left text.
+   Slight contrast boost; no extra filters — let the PNG speak.
+──────────────────────────────────────────────────────────────── */
+.hero-artist-img {
+  height: 100%;
+  width: auto;
+  max-width: 62%;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  margin: 0 auto;
+  filter: contrast(1.04) brightness(0.97);
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .hero-artist-img {
+    max-width: 90%;
+    opacity: 0.7;
+  }
+}
+
+/* ─── ABOUT — MAIN PORTRAIT ───────────────────────────────────
+   about-main.jpg: portrait orientation works best (2:3 ratio ideal).
+   Fills 78% width × 85% height of the 600px column.
+   object-position: top center keeps face in frame.
+   Slight warmth filter to unify with hero palette.
+──────────────────────────────────────────────────────────────── */
+.about-img-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: contrast(1.05) brightness(0.95) saturate(0.9);
+  display: block;
+}
+
+/* ─── ABOUT — ACCENT PHOTO ────────────────────────────────────
+   about-accent.jpg: sits bottom-right, 55%×55% of visual column.
+   Red 2px border frames it. Greyscale + red overlay for editorial tone.
+   Same image as main works fine if only one photo is available.
+──────────────────────────────────────────────────────────────── */
+.about-img-accent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(70%) contrast(1.15);
+  mix-blend-mode: luminosity;
+  display: block;
+}
+
+/* ─── MUSIC — TRACK COVER IMAGES ─────────────────────────────
+   cover-cana.jpg / cover-mariana.jpg / cover-incantation.jpg
+   Square artwork (1:1). Fills absolute inset of .track-art.
+   object-fit: cover ensures no letterboxing regardless of source size.
+   Hover: subtle scale via parent .track-card:hover rule.
+──────────────────────────────────────────────────────────────── */
+.track-cover-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.5s ease, filter 0.3s;
+  filter: brightness(0.92) saturate(1.05);
+}
+.track-card:hover .track-cover-img {
+  transform: scale(1.05);
+  filter: brightness(0.85) saturate(1.1);
+}
+
+/* ─── GALLERY — PHOTO IMAGES ──────────────────────────────────
+   gallery-1 through gallery-6: any orientation accepted.
+   All display with object-fit: cover filling their grid cell completely.
+   object-position: top center keeps faces/subjects in frame.
+   Hover: scale up + remove greyscale for colour pop.
+   .gal-img-fallback shown when image is missing (position:absolute,
+   inset:0 so it fills the cell). Hidden once real img loads via CSS.
+──────────────────────────────────────────────────────────────── */
+.gal-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: grayscale(30%) contrast(1.05);
+  transition: transform 0.6s ease, filter 0.4s;
+  z-index: 1;
+}
+.gal-item:hover .gal-img {
+  transform: scale(1.08);
+  filter: grayscale(0%) contrast(1.05);
+}
+
+/* Fallback tiles — visible only when no image file is present.
+   Once a real .gal-img loads it sits on top (z-index:1 vs z-index:0). */
+.gal-img-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 0;
+}
+/* Reuse existing gp* colour variables */
+.gal-img-fallback.gp1 { background: linear-gradient(135deg, #1a0505, #2a0808); color: rgba(192,22,26,0.25); }
+.gal-img-fallback.gp2 { background: linear-gradient(135deg, #080808, #1a1a1a); color: rgba(240,237,232,0.07); }
+.gal-img-fallback.gp3 { background: linear-gradient(135deg, #050505, #141414); color: rgba(240,237,232,0.05); }
+.gal-img-fallback.gp4 { background: linear-gradient(135deg, #0a0505, #200a0a); color: rgba(192,22,26,0.15); }
+.gal-img-fallback.gp5 { background: linear-gradient(135deg, #050508, #0a0a18); color: rgba(240,237,232,0.05); }
+.gal-img-fallback.gp6 { background: linear-gradient(135deg, #0a0808, #1a1010); color: rgba(192,22,26,0.1); }
+
+/* ─── GALLERY GRID — image slot dimensions reference ──────────
+   gi1: grid-column 1/5  × grid-row 1/3 → 4 units wide, 2 tall → ~400px × 400px
+   gi2: grid-column 5/8  × grid-row 1/2 → 3 units wide, 1 tall → ~300px × 200px
+   gi3: grid-column 8/10 × grid-row 1/2 → 2 units wide, 1 tall → ~200px × 200px
+   gi4: grid-column 10/13× grid-row 1/3 → 3 units wide, 2 tall → ~300px × 400px
+   gi5: grid-column 5/7  × grid-row 2/3 → 2 units wide, 1 tall → ~200px × 200px
+   gi6: grid-column 7/10 × grid-row 2/3 → 3 units wide, 1 tall → ~300px × 200px
+   gi7–gi10: single cells, text-only tiles.
+──────────────────────────────────────────────────────────────── */
+.gallery-grid {
+  margin-top: 48px;
+}
+
+/* ─── GALLERY RESPONSIVE FIX ──────────────────────────────────
+   On mobile, gallery collapses to 2-col grid with reset positions.
+   All images still fill their cell with object-fit: cover.
+──────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 180px);
+  }
+  .gi1, .gi2, .gi3, .gi4, .gi5, .gi6, .gi7, .gi8, .gi9, .gi10 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
