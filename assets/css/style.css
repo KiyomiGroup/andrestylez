@@ -1084,46 +1084,67 @@
   position: relative;
   height: 100vh; min-height: 640px;
   overflow: hidden;
-  background: #1a0205;
+  background: #0d0a08;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
+/* Warm atmospheric texture background */
+.hero-texture-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url('assets/images/hero-bg-texture.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+
 /* Giant name behind everything */
 .hero-bg-name {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  right: 0;
   font-family: var(--font-display);
   font-size: clamp(80px, 14vw, 200px);
-  letter-spacing: 4px;
-  color: rgba(240,237,232,0.12);
+  letter-spacing: 6px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(240,237,232,0.15);
   white-space: nowrap;
   z-index: 1;
   pointer-events: none;
-  text-align: center;
-  width: 100%;
+  line-height: 0.9;
+  overflow: hidden;
+  padding-top: 0;
 }
 
-/* Full-bleed photo */
+/* Full-bleed photo — portrait sits right-center */
 .hero-img-panel {
   position: absolute;
   inset: 0;
   z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .hero-artist-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  filter: contrast(1.05) brightness(0.85);
+  height: 100%;
+  width: auto;
+  max-width: 70%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: contrast(1.05) brightness(0.95);
+  margin: 0 auto;
+  display: block;
 }
 .hero-img-vignette {
   position: absolute; inset: 0;
   background:
-    linear-gradient(0deg, rgba(10,1,2,0.92) 0%, rgba(10,1,2,0.4) 40%, transparent 70%),
-    linear-gradient(180deg, rgba(10,1,2,0.5) 0%, transparent 25%);
+    radial-gradient(ellipse 60% 40% at 50% 50%, transparent 30%, rgba(13,10,8,0.5) 100%),
+    linear-gradient(0deg, rgba(13,10,8,0.97) 0%, rgba(13,10,8,0.5) 25%, transparent 55%),
+    linear-gradient(180deg, rgba(13,10,8,0.7) 0%, transparent 20%);
 }
 
 /* TOP-RIGHT streaming pills */
@@ -1280,36 +1301,7 @@
   background: linear-gradient(180deg, var(--red) 0%, transparent 100%);
 }
 
-/* ─────────────────────────────────────────────
-   NAV STREAMING BUTTONS
-───────────────────────────────────────────── */
-.nav-stream-btns {
-  display: flex; align-items: center; gap: 8px;
-  position: relative;
-}
-.nav-stream-btn {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 8px 14px;
-  transition: all .2s;
-  cursor: none;
-}
-.nav-stream-btn svg { flex-shrink: 0; }
-.nav-spotify { background: #1DB954; color: #000; }
-.nav-spotify:hover { background: #17a349; }
-.nav-apple {
-  background: transparent; color: var(--white);
-  border: 1px solid rgba(240,237,232,0.2);
-}
-.nav-apple:hover { border-color: var(--white); }
-
-@media (max-width: 900px) {
-  .nav-stream-btns { display: none; }
-}
+/* nav stream btns removed */
 
 /* ─────────────────────────────────────────────
    COMING SOON TAG
