@@ -1,463 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ANDRESTYLEZ</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adunola Babadiya — Product Designer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="main-site" data-page="home">
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="page-overlay" id="pageOverlay"></div>
 
-<nav id="mainNav">
-  <a href="#" class="nav-logo">ANDRESTYLEZ</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#music">Music</a></li>
-    <li><a href="#videos">Videos</a></li>
-    <li><a href="#shows">Shows</a></li>
-    <li><a href="#merch">Merch</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-  </button>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <ul class="mobile-menu-links">
-    <li><a href="#about" onclick="closeMobile()">About</a></li>
-    <li><a href="#music" onclick="closeMobile()">Music</a></li>
-    <li><a href="#videos" onclick="closeMobile()">Videos</a></li>
-    <li><a href="#shows" onclick="closeMobile()">Shows</a></li>
-    <li><a href="#merch" onclick="closeMobile()">Merch</a></li>
-    <li><a href="#contact" onclick="closeMobile()">Book</a></li>
-  </ul>
-  <div class="mobile-menu-social">
-    <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ" target="_blank">Spotify</a>
-    <a href="https://music.apple.com/us/album/%C4%87%C7%8E%C5%86%C3%A2-single/1891542517" target="_blank">Apple Music</a>
-    <a href="https://audiomack.com/Andrestylez" target="_blank">Audiomack</a>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
- HERO
- hero-bg-texture.png  → warm atmospheric BG (fills entire hero behind everything)
- hero-artist.png      → artist portrait, centred, bottom-anchored, full height
-════════════════════════════════════════ -->
-<section id="hero">
-  <!-- Layer 1: warm atmospheric texture -->
-  <div class="hero-texture-bg">
-    <img src="assets/images/hero-bg-uploaded.png" alt="" aria-hidden="true">
-  </div>
-  <!-- Layer 2: giant name watermark -->
-  <div class="hero-bg-name" aria-hidden="true">ANDRESTYLEZ</div>
-  <!-- Layer 3: artist portrait + vignette -->
-  <div class="hero-img-panel">
-    <img src="assets/images/hero-artist.png" alt="Andrestylez" class="hero-artist-img">
-    <div class="hero-img-vignette"></div>
-  </div>
-  <!-- Streaming pills top-right -->
-  <div class="hero-stream-pills">
-    <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ?si=KiUqcF86RhSm_cYwI0UJSg" target="_blank" rel="noopener" class="stream-pill pill-spotify">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-      [ Spotify ]
-    </a>
-    <a href="https://music.apple.com/us/album/%C4%87%C7%8E%C5%86%C3%A2-single/1891542517" target="_blank" rel="noopener" class="stream-pill pill-apple">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      [ Apple Music ]
-    </a>
-  </div>
-  <!-- Shows panel top-left -->
-  <div class="hero-shows-panel">
-    <div class="hsp-header">
-      <span class="hsp-title">UPCOMING<br>SHOWS</span>
-      <a href="#shows" class="hsp-arrow">→</a>
+  <div class="system-map" id="systemMap">
+    <button class="map-close" id="mapClose" aria-label="Close system map">x Close</button>
+    <div class="map-title">Design System</div>
+    <div class="map-subtitle">Click any world to explore</div>
+    <div class="map-nodes">
+      <div class="map-center-node" onclick="navigateTo('index.html')">
+        <div class="node-ring"></div>
+        <span class="node-label-main">Adunola</span>
+        <span class="node-sub">Product Design</span>
+      </div>
+      <div class="map-node node-uiux" onclick="navigateTo('worlds/uiux.html')"><div class="node-dot"></div><span>UI/UX</span></div>
+      <div class="map-node node-graphic" onclick="navigateTo('worlds/graphic.html')"><div class="node-dot"></div><span>Graphic</span></div>
+      <div class="map-node node-nocode" onclick="navigateTo('worlds/nocode.html')"><div class="node-dot"></div><span>No-Code</span></div>
+      <div class="map-node node-vibe" onclick="navigateTo('worlds/vibe-lab.html')"><div class="node-dot"></div><span>Vibe Coding</span></div>
     </div>
-    <div class="hsp-list">
-      <div class="hsp-row"><span class="hsp-date">TBA</span><span class="hsp-loc">Lagos, Nigeria</span></div>
-      <div class="hsp-row"><span class="hsp-date">TBA</span><span class="hsp-loc">Lagos, Nigeria</span></div>
-    </div>
+    <svg class="map-lines" id="mapLines" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+      <line class="map-line" x1="400" y1="300" x2="200" y2="120" />
+      <line class="map-line" x1="400" y1="300" x2="620" y2="150" />
+      <line class="map-line" x1="400" y1="300" x2="150" y2="430" />
+      <line class="map-line" x1="400" y1="300" x2="650" y2="430" />
+    </svg>
   </div>
-  <!-- Bottom: name + tagline + CTA -->
-  <div class="hero-bottom">
-    <div class="hero-name-block">
-      <h1 class="hero-name-main">ANDRESTYLEZ</h1>
-      <p class="hero-tagline-bottom">Music that hits different. You won't hear this on TV.</p>
-    </div>
-    <div class="hero-bottom-cta">
-      <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ?si=KiUqcF86RhSm_cYwI0UJSg" target="_blank" rel="noopener" class="hero-listen-btn">LISTEN NOW <span class="listen-arrow">↗</span></a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>↓</span>
-  </div>
-</section>
 
-<div class="marquee-bar">
+  <nav class="nav" id="mainNav">
+    <a href="index.html" class="nav-logo">Adunola<span class="logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="mailto:Adunoladiya@gmail.com" class="nav-link">Contact</a>
+      <button class="nav-system-btn" id="openSystemMap">Explore System</button>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow reveal">Product Designer · Vibe Coder · Visual Creator</div>
+    <h1 class="hero-headline reveal-delay">
+      I design things that<br/>
+      <em>feel right before they load.</em>
+    </h1>
+    <p class="hero-sub reveal-delay-2">
+      Adunola Babadiya is a Lagos based product designer, visual creator and vibe coder who builds experiences people actually enjoy using. From Figma to fully deployed sites, the gap between design and reality is where I live.
+    </p>
+    <div class="hero-cta reveal-delay-3">
+      <a href="#work" class="btn-primary">View Work</a>
+      <a href="mailto:Adunoladiya@gmail.com" class="btn-ghost">Lets Talk</a>
+    </div>
+    <div class="hero-scroll-hint reveal-delay-3">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
   <div class="marquee-track">
-    <span>ANDRESTYLEZ</span><span class="dot">◆</span>
-    <span>ĆǍŅÂ OUT NOW</span><span class="dot">◆</span>
-    <span>AFROBEATS · LAGOS</span><span class="dot">◆</span>
-    <span>VERSATILE</span><span class="dot">◆</span>
-    <span>STREAM NOW</span><span class="dot">◆</span>
-    <span>ANDRESTYLEZ</span><span class="dot">◆</span>
-    <span>ĆǍŅÂ OUT NOW</span><span class="dot">◆</span>
-    <span>AFROBEATS · LAGOS</span><span class="dot">◆</span>
-    <span>VERSATILE</span><span class="dot">◆</span>
-    <span>STREAM NOW</span><span class="dot">◆</span>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
- ABOUT
- about-main.jpg   → main tall portrait, left column, object-fit:cover, top-anchored
- about-accent.jpg → overlapping accent frame (55%x55%), red border, greyscale tint
-════════════════════════════════════════ -->
-<section id="about">
-  <div class="about-grid max-w">
-    <div class="about-visual reveal-left">
-      <div class="about-img-main">
-        <img src="assets/images/about-main.jpg" alt="Andrestylez">
-      </div>
-      <div class="about-img-accent">
-        <img src="assets/images/about-accent.PNG" alt="Andrestylez">
-      </div>
-      <div class="about-year">26</div>
-    </div>
-    <div class="about-text reveal-right">
-      <div class="section-label">Story</div>
-      <h2 class="section-title">THE<br>ART OF<br><span>STYLE</span></h2>
-      <p class="about-body">Andrestylez is more than a name — it's a philosophy. Born and raised in Lagos, Nigeria, his sound is a fusion of Afrobeats, R&amp;B, and street soul that refuses genre labels.</p>
-      <p class="about-body">Versatile and unapologetic, every track is a direct transmission from life lived fully — raw, styled, and always authentic. From his debut cuts to the latest drop <em>ĆǍŅÂ</em> (2026), Andrestylez is carving his own lane on the global stage.</p>
-      <div class="about-stats">
-        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Releases</div></div>
-        <div class="stat"><div class="stat-num">2022</div><div class="stat-label">Since</div></div>
-        <div class="stat"><div class="stat-num">LGS</div><div class="stat-label">Lagos-Based</div></div>
-      </div>
+    <div class="marquee-inner">
+      <span>UI/UX Design</span><span class="sep">·</span>
+      <span>Vibe Coding</span><span class="sep">·</span>
+      <span>Product Design</span><span class="sep">·</span>
+      <span>Figma</span><span class="sep">·</span>
+      <span>No-Code</span><span class="sep">·</span>
+      <span>Graphic Design</span><span class="sep">·</span>
+      <span>Design Systems</span><span class="sep">·</span>
+      <span>AI Tools</span><span class="sep">·</span>
+      <span>Game UI</span><span class="sep">·</span>
+      <span>UI/UX Design</span><span class="sep">·</span>
+      <span>Vibe Coding</span><span class="sep">·</span>
+      <span>Product Design</span><span class="sep">·</span>
+      <span>AI Tools</span><span class="sep">·</span>
+      <span>Game UI</span><span class="sep">·</span>
     </div>
   </div>
-</section>
 
-<!-- ═══════════════════════════════════════
- MUSIC
- cover-cana.jpg        → square 1:1, fills track card 01 face completely
- cover-mariana.jpg     → square 1:1, fills track card 02 face completely
- cover-incantation.jpg → square 1:1, fills track card 03 face completely
- Fallback gradient shown if image is missing.
-════════════════════════════════════════ -->
-<section id="music">
-  <div class="max-w">
-    <div class="music-header">
-      <div>
-        <div class="section-label reveal">Discography</div>
-        <h2 class="section-title reveal">LATEST<br>RELEASES</h2>
+  <section class="about-strip" id="about">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <h2>A designer who thinks in systems, builds with AI, and ships work that holds up.</h2>
+        <p>Based in Lagos, Nigeria, I work at the intersection of product design, visual identity and AI assisted development. I have spent years helping startups, agencies and gaming companies create interfaces that are not only functional and thoughtful but visually sharp and emotionally resonant.</p>
+        <p style="margin-top:16px;">What makes my work different is the range. I move between Figma and a code editor without losing the thread. I use AI tools like Claude, Cursor and Lovable to ship production ready websites faster than most teams expect, while keeping the design quality high. Whether it is a mobile app, a brand identity or a fully built website, the intent is always the same: make it feel inevitable.</p>
       </div>
-      <a href="https://audiomack.com/Andrestylez/songs" target="_blank" class="btn-ghost reveal">View All</a>
+      <div class="about-stats reveal-delay">
+        <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years Experience</span></div>
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Projects Shipped</span></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Design Worlds</span></div>
+        <div class="stat"><span class="stat-num">6</span><span class="stat-label">Live Vibe Sites</span></div>
+      </div>
     </div>
-    <div class="music-grid">
+  </section>
 
-      <div class="track-card tc1 reveal">
-        <div class="track-art">
-          <img src="assets/images/cover-cana.png" alt="ĆǍŅÂ" class="track-cover-img">
-        </div>
-        <div class="track-num">01</div>
-        <div class="track-overlay">
-          <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ" target="_blank" class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></a>
-        </div>
-        <div class="track-info">
-          <div class="track-name">ĆǍŅÂ</div>
-          <div class="track-meta">Single · April 2026</div>
-        </div>
-      </div>
-
-      <div class="track-card tc2 reveal" style="transition-delay:.1s">
-        <div class="track-art">
-          <img src="assets/images/cover-mariana.png" alt="Mariana" class="track-cover-img">
-        </div>
-        <div class="track-num">02</div>
-        <div class="track-overlay">
-          <a href="https://music.apple.com/us/album/mariana-single/1823981062" target="_blank" class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></a>
-        </div>
-        <div class="track-info">
-          <div class="track-name">MARIANA</div>
-          <div class="track-meta">Single · 2025</div>
-        </div>
-      </div>
-
-      <div class="track-card tc3 reveal" style="transition-delay:.2s">
-        <div class="track-art">
-          <img src="assets/images/cover-incantation.jpeg" alt="Incantation" class="track-cover-img">
-        </div>
-        <div class="track-num">03</div>
-        <div class="track-overlay">
-          <a href="https://music.apple.com/us/album/incantation-single/1779854271" target="_blank" class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></a>
-        </div>
-        <div class="track-info">
-          <div class="track-name">INCANTATION</div>
-          <div class="track-meta">Single · 2024</div>
-        </div>
-      </div>
-
+  <section class="how-i-work">
+    <div class="section-header">
+      <span class="section-tag reveal">Process</span>
+      <h2 class="section-title reveal-delay">How I Work</h2>
     </div>
-
-    <div class="featured-track reveal">
-      <div class="featured-vinyl" id="vinyl"></div>
-      <div class="featured-info">
-        <div class="featured-label">// Now Streaming</div>
-        <div class="featured-title">ĆǍŅÂ</div>
-        <div class="featured-sub">Andrestylez · April 11, 2026 · Prod. Adekunle Kamal / Kamalsongs</div>
-        <div class="featured-actions">
-          <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ?si=KiUqcF86RhSm_cYwI0UJSg" target="_blank" class="stream-btn active">Spotify</a>
-          <a href="https://music.apple.com/us/album/%C4%87%C7%8E%C5%86%C3%A2-single/1891542517" target="_blank" class="stream-btn">Apple Music</a>
-          <a href="https://audiomack.com/Andrestylez/song/cana" target="_blank" class="stream-btn">Audiomack</a>
-          <a href="https://unitedmasters.com/m/-2485" target="_blank" class="stream-btn">All Platforms</a>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <span class="process-num">01</span>
+        <div class="process-body">
+          <h3>Listen and Define</h3>
+          <p>Every project starts with understanding the actual problem, not just the brief. I ask the questions most designers skip so I can design for the right outcome from day one.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">02</span>
+        <div class="process-body">
+          <h3>Research and Structure</h3>
+          <p>I look at what exists, what users actually do, and where the friction lives. Then I map out the information architecture and user flows before touching any visual tool.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">03</span>
+        <div class="process-body">
+          <h3>Design with Intention</h3>
+          <p>In Figma I work from wireframes to high fidelity without losing clarity. Every decision around spacing, type scale, color and interaction has a reason behind it that I can explain.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">04</span>
+        <div class="process-body">
+          <h3>Build and Ship</h3>
+          <p>For projects that need to go live fast, I use AI assisted tools like Cursor, Claude, Lovable and Framer to turn designs into real deployed websites. No waiting on a developer.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <span class="process-num">05</span>
+        <div class="process-body">
+          <h3>Iterate and Improve</h3>
+          <p>Good design does not stop at launch. I stay involved through feedback cycles and make sure what ships keeps getting better over time.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="videos">
-  <div class="max-w">
-    <div class="section-label reveal">Visual</div>
-    <h2 class="section-title reveal">MUSIC<br>VIDEOS <span class="coming-soon-tag" style="font-size:13px;vertical-align:middle;">Coming Soon</span></h2>
-    <div class="video-grid">
-      <div class="video-card reveal">
-        <div class="video-thumb vid1">ĆǍŅÂ</div>
-        <div class="video-overlay"><div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-        <div class="video-caption">
-          <div class="video-title">ĆǍŅÂ — Official Video <span class="coming-soon-tag">Coming Soon</span></div>
-          <div class="video-sub">2026</div>
-        </div>
-      </div>
-      <div class="video-side">
-        <div class="video-card reveal" style="transition-delay:.15s">
-          <div class="video-thumb vid2">MARIANA</div>
-          <div class="video-overlay"><div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="video-caption">
-            <div class="video-title">MARIANA <span class="coming-soon-tag">Coming Soon</span></div>
-            <div class="video-sub">2025</div>
+  <section class="work" id="work">
+    <div class="section-header">
+      <span class="section-tag reveal">Selected Work</span>
+      <h2 class="section-title reveal-delay">Case Studies</h2>
+    </div>
+
+    <div class="work-grid">
+
+      <article class="work-card reveal" onclick="navigateTo('case-studies/streettasker.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder" style="background:linear-gradient(135deg,#1a1f2e,#0d1117);">
+            <div class="site-preview-embed">
+              <div class="site-preview-bar"><span></span><span></span><span></span></div>
+              <div class="site-preview-content" style="background:linear-gradient(160deg,#1a2744,#0f1829);">
+                <div class="preview-headline" style="color:#5b9cf6;">Task. Earn. Repeat.</div>
+                <div class="preview-sub">Connecting workers with everyday jobs</div>
+                <div class="preview-btn" style="background:#5b9cf6;color:#fff;">Get Started</div>
+              </div>
+            </div>
+            <span class="project-type-badge" style="background:rgba(91,156,246,0.15);color:#5b9cf6;border-color:rgba(91,156,246,0.3);">Vibe Coding</span>
           </div>
         </div>
-        <div class="video-card reveal" style="transition-delay:.3s">
-          <div class="video-thumb vid3">INCANTATION</div>
-          <div class="video-overlay"><div class="video-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
-          <div class="video-caption">
-            <div class="video-title">INCANTATION <span class="coming-soon-tag">Coming Soon</span></div>
-            <div class="video-sub">2024</div>
+        <div class="card-body">
+          <span class="card-tag">Vibe Coding · AI Built · Gig Economy</span>
+          <h3 class="card-title">StreetTasker — Gig Economy Platform</h3>
+          <p class="card-desc">A fully deployed platform connecting everyday people with local task workers. Designed and built using AI tools in a single focused sprint from concept to live site.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
+
+      <article class="work-card reveal" onclick="navigateTo('case-studies/andrestylez.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder" style="background:linear-gradient(135deg,#1f1208,#2a1a06);">
+            <div class="site-preview-embed">
+              <div class="site-preview-bar"><span></span><span></span><span></span></div>
+              <div class="site-preview-content" style="background:linear-gradient(160deg,#2a1508,#1a0e04);">
+                <div class="preview-headline" style="color:#e8a84c;letter-spacing:0.1em;">ANDRE STYLEZ</div>
+                <div class="preview-sub" style="color:#9a7a4a;">Fashion. Identity. Culture.</div>
+                <div class="preview-btn" style="background:#e8a84c;color:#1a0e04;">Shop Now</div>
+              </div>
+            </div>
+            <span class="project-type-badge" style="background:rgba(232,168,76,0.15);color:#e8a84c;border-color:rgba(232,168,76,0.3);">Vibe Coding</span>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="card-body">
+          <span class="card-tag">Vibe Coding · Fashion · E-Commerce</span>
+          <h3 class="card-title">AndreStylez — Fashion Brand Website</h3>
+          <p class="card-desc">A bold fashion brand presence built entirely with AI coding tools. The aesthetic captures the energy of the brand and the site went from idea to deployed in under a day.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
 
-<section id="shows">
-  <div class="max-w">
-    <div class="shows-header">
-      <div>
-        <div class="section-label reveal">Live</div>
-        <h2 class="section-title reveal">UPCOMING<br>/SHOWS</h2>
-      </div>
-    </div>
-    <div class="shows-coming-placeholder reveal">
-      <div class="scp-inner">
-        <div class="scp-icon">◈</div>
-        <div class="scp-text">Tour dates coming soon. <span class="coming-soon-tag">Coming Soon</span></div>
-        <a href="#contact" class="btn-ghost" style="margin-top:28px;display:inline-block;">Book Andrestylez</a>
-      </div>
-    </div>
-  </div>
-</section>
+      <article class="work-card reveal" onclick="navigateTo('case-studies/cvbykiyomi.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder" style="background:linear-gradient(135deg,#0a1520,#141e2a);">
+            <div class="site-preview-embed">
+              <div class="site-preview-bar"><span></span><span></span><span></span></div>
+              <div class="site-preview-content" style="background:linear-gradient(160deg,#0d1e30,#091525);">
+                <div class="preview-headline" style="color:#64b5f6;font-size:14px;">CV by Kiyomi</div>
+                <div class="preview-sub" style="color:#78909c;">Beautiful CV builder. Stand out instantly.</div>
+                <div style="display:flex;gap:6px;margin-top:8px;">
+                  <div style="background:#1e3a5f;border-radius:3px;padding:4px 8px;font-size:9px;color:#64b5f6;">Template A</div>
+                  <div style="background:#1e3a5f;border-radius:3px;padding:4px 8px;font-size:9px;color:#64b5f6;">Template B</div>
+                </div>
+              </div>
+            </div>
+            <span class="project-type-badge" style="background:rgba(100,181,246,0.15);color:#64b5f6;border-color:rgba(100,181,246,0.3);">Vibe Coding</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Vibe Coding · Career Tech · Resume Tool</span>
+          <h3 class="card-title">CV by Kiyomi — Resume Builder Platform</h3>
+          <p class="card-desc">A clean AI assisted resume builder that helps job seekers create standout CVs. Designed for simplicity and built and deployed using vibe coding techniques.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
 
-<!-- ═══════════════════════════════════════
- GALLERY
- gallery-1.jpg → gi1  (large, 4 cols × 2 rows — dominant left slot)
- gallery-2.jpg → gi2  (medium, 3 cols × 1 row — top middle)
- gallery-3.jpg → gi3  (medium, 2 cols × 1 row — top right-mid)
- gallery-4.jpg → gi4  (large, 3 cols × 2 rows — right column)
- gallery-5.jpg → gi5  (medium, 2 cols × 1 row — mid left)
- gallery-6.jpg → gi6  (medium, 3 cols × 1 row — mid right)
- gi7–gi10 are styled text tiles (no image needed).
- All images: object-fit:cover, object-position:top center, grayscale 30%.
-════════════════════════════════════════ -->
-<section id="gallery">
-  <div class="max-w">
-    <div class="section-label reveal">Visual Diary</div>
-    <h2 class="section-title reveal">GALLERY</h2>
-  </div>
-  <div class="gallery-grid">
-    <div class="gal-item gi1">
-      <img src="assets/images/gallery-1.jpg" alt="Andrestylez" class="gal-img">
-      <div class="gal-img-fallback gp1">A</div>
-    </div>
-    <div class="gal-item gi2">
-      <img src="assets/images/gallery-2.jpeg" alt="Andrestylez" class="gal-img">
-      <div class="gal-img-fallback gp2">S</div>
-    </div>
-    <div class="gal-item gi3">
-      <img src="assets/images/gallery-3.PNG" alt="Andrestylez" class="gal-img">
-      <div class="gal-img-fallback gp3">T</div>
-    </div>
-    <div class="gal-item gi4">
-      <img src="assets/images/gallery-4.png" alt="Andrestylez" class="gal-img">
-      <div class="gal-img-fallback gp4">Y</div>
-    </div>
-    <div class="gal-item gi5">
-      <div class="gal-mesh gm5"></div>
-    </div>
-    <div class="gal-item gi6">
-      <div class="gal-mesh gm6"></div>
-    </div>
-    <div class="gal-item gi7"><div class="gal-placeholder gp7">LGS</div></div>
-    <div class="gal-item gi8"><div class="gal-placeholder gp8">NGR</div></div>
-    <div class="gal-item gi9"><div class="gal-placeholder gp9">LIVE</div></div>
-    <div class="gal-item gi10"><div class="gal-placeholder gp10">2026</div></div>
-  </div>
-</section>
+      <article class="work-card reveal" onclick="navigateTo('case-studies/swappy.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder" style="background:linear-gradient(135deg,#0f1f18,#142a1e);">
+            <div class="site-preview-embed">
+              <div class="site-preview-bar"><span></span><span></span><span></span></div>
+              <div class="site-preview-content" style="background:linear-gradient(160deg,#122518,#0c1c11);">
+                <div class="preview-headline" style="color:#4caf82;font-size:18px;">Swappy</div>
+                <div class="preview-sub" style="color:#6a9a7a;">Trade anything. Fast. Safe.</div>
+                <div class="preview-btn" style="background:#4caf82;color:#0c1c11;">Start Trading</div>
+              </div>
+            </div>
+            <span class="project-type-badge" style="background:rgba(76,175,130,0.15);color:#4caf82;border-color:rgba(76,175,130,0.3);">Vibe Coding</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Vibe Coding · Marketplace · Trade Platform</span>
+          <h3 class="card-title">Swappy — Peer to Peer Trading Platform</h3>
+          <p class="card-desc">A swap and trade platform built with AI coding tools. The interface was designed to make peer to peer exchanges feel safe, simple and fast for everyday users.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
 
-<section id="merch">
-  <div class="max-w">
-    <div class="merch-intro">
-      <div class="merch-intro-left">
-        <div class="section-label reveal">Official</div>
-        <h2 class="section-title reveal">MERCH<br>DROP <span class="coming-soon-tag" style="font-size:13px;vertical-align:middle;">Coming Soon</span></h2>
-      </div>
-      <p class="merch-intro-right reveal">Wearable art from the Andrestylez universe. Limited drops, made for those who live the aesthetic.</p>
-    </div>
-    <div class="merch-grid">
-      <div class="merch-card reveal">
-        <div class="merch-img"><div class="merch-img-inner mi1">A/S</div><div class="merch-label-overlay">Coming Soon</div></div>
-        <div class="merch-details"><div><div class="merch-name">STYLEZ TEE</div><div class="merch-price">TBA</div></div></div>
-      </div>
-      <div class="merch-card reveal" style="transition-delay:.15s">
-        <div class="merch-img"><div class="merch-img-inner mi2">LGS</div><div class="merch-label-overlay">Coming Soon</div></div>
-        <div class="merch-details"><div><div class="merch-name">LAGOS HOODIE</div><div class="merch-price">TBA</div></div></div>
-      </div>
-      <div class="merch-card reveal" style="transition-delay:.3s">
-        <div class="merch-img"><div class="merch-img-inner mi3">ĆǍŅ</div><div class="merch-label-overlay">Coming Soon</div></div>
-        <div class="merch-details"><div><div class="merch-name">ĆǍŅÂ CAP</div><div class="merch-price">TBA</div></div></div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px;"><a href="#contact" class="btn-ghost reveal">Stay Updated</a></div>
-  </div>
-</section>
+      <article class="work-card reveal" onclick="navigateTo('case-studies/portfolia.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder" style="background:linear-gradient(135deg,#1a1020,#231530);">
+            <div class="site-preview-embed">
+              <div class="site-preview-bar"><span></span><span></span><span></span></div>
+              <div class="site-preview-content" style="background:linear-gradient(160deg,#1e1230,#150e25);">
+                <div class="preview-headline" style="color:#b28ef0;font-size:18px;">portfolia.</div>
+                <div class="preview-sub" style="color:#7a6a9a;">Your creative work, beautifully shown.</div>
+                <div class="preview-btn" style="background:linear-gradient(90deg,#b28ef0,#7c5cbf);color:#fff;">Build Portfolio</div>
+              </div>
+            </div>
+            <span class="project-type-badge" style="background:rgba(178,142,240,0.15);color:#b28ef0;border-color:rgba(178,142,240,0.3);">Vibe Coding</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Vibe Coding · Portfolio Tool · Creatives</span>
+          <h3 class="card-title">Portfolia — Creative Portfolio Builder</h3>
+          <p class="card-desc">A portfolio building tool designed for creatives who want to showcase their work without technical overhead. Fully built and deployed with AI coding assistance.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
 
-<section id="newsletter">
-  <div class="newsletter-inner">
-    <div class="newsletter-text">
-      <div class="section-label">Fan Club</div>
-      <h2 class="section-title">STAY<br>CONNECTED</h2>
-      <p>Be first for new drops, exclusive content, early ticket access, and direct messages from Andrestylez.</p>
-    </div>
-    <div class="newsletter-form">
-      <input type="text" placeholder="Your name">
-      <input type="email" placeholder="Your email">
-      <button type="button">Join the Andrestylez List →</button>
-    </div>
-  </div>
-</section>
+      <article class="work-card reveal" onclick="navigateTo('case-studies/tailorcv.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder" style="background:linear-gradient(135deg,#1f1a0a,#2a2210);">
+            <div class="site-preview-embed">
+              <div class="site-preview-bar"><span></span><span></span><span></span></div>
+              <div class="site-preview-content" style="background:linear-gradient(160deg,#261d08,#1a1406);">
+                <div class="preview-headline" style="color:#d4a843;font-size:16px;">Tailor CV</div>
+                <div class="preview-sub" style="color:#8a7a4a;">Match every application. Land more interviews.</div>
+                <div class="preview-btn" style="background:#d4a843;color:#1a1406;">Tailor My CV</div>
+              </div>
+            </div>
+            <span class="project-type-badge" style="background:rgba(212,168,67,0.15);color:#d4a843;border-color:rgba(212,168,67,0.3);">Vibe Coding</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Vibe Coding · Career Tech · AI Tool</span>
+          <h3 class="card-title">Tailor CV — AI Powered Resume Matching</h3>
+          <p class="card-desc">A smart resume tailoring tool that helps job seekers align their CV with specific job descriptions. Built end to end using AI coding tools with a clean focused interface.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
 
-<div class="socials-strip">
-  <div class="social-links">
-    <a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ" target="_blank" class="social-link">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-      Spotify
-    </a>
-    <a href="https://music.apple.com/us/artist/andrestylez/1655155158" target="_blank" class="social-link">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      Apple Music
-    </a>
-    <a href="https://audiomack.com/Andrestylez" target="_blank" class="social-link">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-      Audiomack
-    </a>
-    <a href="https://unitedmasters.com/m/-2485" target="_blank" class="social-link">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
-      All Platforms
-    </a>
-  </div>
-  <div class="social-count">
-    <span style="color:var(--white);font-family:var(--font-mono);font-size:11px;letter-spacing:2px;">ĆǍŅÂ · STREAM NOW</span>
-  </div>
-</div>
+      <article class="work-card reveal" onclick="navigateTo('case-studies/project-1.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder vitsetech">
+            <div class="placeholder-pattern"></div>
+            <span class="project-type-badge">Mobile UI</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">UI/UX · Mobile Responsiveness</span>
+          <h3 class="card-title">Vitsetech — Mobile Responsiveness Redesign</h3>
+          <p class="card-desc">Redesigned the mobile experience of a tech company website improving layout, readability and touch interaction across all breakpoints.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
 
-<section id="contact">
-  <div class="max-w">
-    <div class="section-label reveal">Bookings &amp; Press</div>
-    <h2 class="section-title reveal">GET IN<br>TOUCH</h2>
-    <div class="contact-grid">
-      <div class="contact-info reveal-left">
-        <p>For bookings, press inquiries, collaborations, and brand partnerships — reach out below. All serious inquiries welcomed.</p>
-        <div class="contact-items">
-          <div class="contact-item"><div class="ci-label">Genre</div><div class="ci-val">Afrobeats / Afrosounds</div></div>
-          <div class="contact-item"><div class="ci-label">Label</div><div class="ci-val">Independent · UnitedMasters</div></div>
-          <div class="contact-item"><div class="ci-label">Based</div><div class="ci-val">Lagos, Nigeria</div></div>
-          <div class="contact-item"><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:andrestylez0017@gmail.com" class="contact-link">andrestylez0017@gmail.com</a></div></div>
-          <div class="contact-item"><div class="ci-label">WhatsApp</div><div class="ci-val"><a href="https://wa.me/2347073920562" target="_blank" rel="noopener" class="contact-link">+234 707 392 0562</a></div></div>
-          <div class="contact-item"><div class="ci-label">Instagram</div><div class="ci-val"><a href="https://instagram.com/andrestylez_1" target="_blank" rel="noopener" class="contact-link">@andrestylez_1</a></div></div>
-          <div class="contact-item"><div class="ci-label">Snapchat</div><div class="ci-val"><a href="https://snapchat.com/add/andrestylez007" target="_blank" rel="noopener" class="contact-link">@andrestylez007</a></div></div>
+      <article class="work-card reveal" onclick="navigateTo('case-studies/project-2.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder lifemap">
+            <div class="placeholder-pattern"></div>
+            <span class="project-type-badge">App Design</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Product Design · Mobile</span>
+          <h3 class="card-title">Lifemap Naija — Mental Wellness App</h3>
+          <p class="card-desc">Designed a passion discovery and mental wellness app for Nigerian users grounding emotional UX in accessible, culturally aware design.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
+
+      <article class="work-card work-card--wide reveal" onclick="navigateTo('case-studies/project-3.html')">
+        <div class="card-image">
+          <div class="card-img-placeholder safari">
+            <div class="placeholder-pattern"></div>
+            <span class="project-type-badge">Game UI</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Game UI · Illustration · Maliyo Games</span>
+          <h3 class="card-title">Safari City — Game UI Redesign</h3>
+          <p class="card-desc">Redesigned the game UI for Maliyo Games Safari City bringing visual clarity, African inspired aesthetics and engaging micro interactions to Africa's leading mobile game.</p>
+          <span class="card-link">View Case Study</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="section-header">
+      <span class="section-tag reveal">What I Do</span>
+      <h2 class="section-title reveal-delay">Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-item reveal">
+        <span class="service-num">01</span>
+        <h3>Product and UX Design</h3>
+        <p>End to end product design from research and wireframes to polished Figma prototypes and handoff ready specs. I work through the entire process, not just the pretty parts.</p>
+      </div>
+      <div class="service-item reveal">
+        <span class="service-num">02</span>
+        <h3>UI and Visual Design</h3>
+        <p>Pixel perfect interfaces with a strong visual identity for SaaS, AI tools, apps and websites. I care about how things look because first impressions matter and aesthetics convert.</p>
+      </div>
+      <div class="service-item reveal">
+        <span class="service-num">03</span>
+        <h3>Vibe Coding</h3>
+        <p>Full websites designed and deployed using AI tools like Claude, Cursor, Lovable and Bolt. Fast, functional and genuinely well designed without waiting on a traditional dev cycle.</p>
+      </div>
+      <div class="service-item reveal">
+        <span class="service-num">04</span>
+        <h3>Game UI Design</h3>
+        <p>Game interfaces with personality including HUDs, menus and icon systems crafted in Figma and Adobe Illustrator. Built for engagement and cultural resonance.</p>
+      </div>
+      <div class="service-item reveal">
+        <span class="service-num">05</span>
+        <h3>Graphic Design</h3>
+        <p>Brand identity, flyers, logos and social media visuals that communicate clearly and look exceptional. Design that works across both print and screen.</p>
+      </div>
+      <div class="service-item reveal">
+        <span class="service-num">06</span>
+        <h3>No-Code Development</h3>
+        <p>Building and deploying polished web experiences with Framer, WordPress and Webflow. Fast, functional and beautiful without writing traditional code from scratch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <div class="section-header">
+      <span class="section-tag reveal">Background</span>
+      <h2 class="section-title reveal-delay">Experience</h2>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item reveal">
+        <div class="exp-year">2024 – Present</div>
+        <div class="exp-body">
+          <h3>Senior Web Designer</h3>
+          <span class="exp-company">Scrum Consult</span>
+          <p>Leading web design and UI/UX for client projects covering website design, mobile UI and design system development. Working closely with development teams to ensure designs ship exactly as intended.</p>
         </div>
       </div>
-      <div class="contact-form reveal-right" style="display:flex;flex-direction:column;justify-content:center;gap:24px;">
-        <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:2px;color:var(--grey);text-transform:uppercase;line-height:1.8;">The fastest way to reach Andrestylez is directly — hit the email or WhatsApp links on the left. All serious bookings, press, and collaboration inquiries are welcomed and responded to personally.</p>
-        <a href="mailto:andrestylez0017@gmail.com?subject=Inquiry" class="btn-primary" style="display:inline-block;text-align:center;max-width:280px;">Email Directly →</a>
-        <a href="https://wa.me/2347073920562" target="_blank" rel="noopener" class="btn-ghost" style="display:inline-block;text-align:center;max-width:280px;">WhatsApp →</a>
+      <div class="exp-item reveal">
+        <div class="exp-year">Mar – Jul 2025</div>
+        <div class="exp-body">
+          <h3>Game UI Designer</h3>
+          <span class="exp-company">Maliyo Games</span>
+          <p>Designed game interfaces and icon systems for Safari City, Africa's leading mobile gaming platform. Balanced functional clarity with vibrant African visual identity across the entire UI.</p>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-year">2022 – 2024</div>
+        <div class="exp-body">
+          <h3>WordPress Developer and Designer</h3>
+          <span class="exp-company">Kiyomi (Self Directed)</span>
+          <p>Built and maintained websites for clients across Nigeria using WordPress. Developed a deep understanding of how design decisions affect real user behavior and business outcomes.</p>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-year">2023 – Present</div>
+        <div class="exp-body">
+          <h3>Independent Designer and Vibe Coder</h3>
+          <span class="exp-company">Kiyomi Groups</span>
+          <p>Running my own design and build practice. Working with startups, entrepreneurs and brands across Nigeria to create products that are both visually strong and technically deployed. Specializing in AI assisted development for fast turnaround projects.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">ANDRE<br>STYLEZ</div>
-        <div class="footer-tagline">Music · Culture · Style</div>
+  <section class="system-cta">
+    <div class="cta-inner reveal">
+      <span class="cta-tag">More than one world</span>
+      <h2>There is more to explore.</h2>
+      <p>Beyond product design, there are four more worlds. Each one has its own aesthetic, its own focus, and its own kind of work.</p>
+      <button class="btn-primary" id="ctaOpenMap">View Full System</button>
+    </div>
+    <div class="cta-worlds-preview">
+      <a class="world-chip reveal" href="worlds/uiux.html">UI/UX World</a>
+      <a class="world-chip reveal" href="worlds/graphic.html">Graphic Design</a>
+      <a class="world-chip reveal" href="worlds/nocode.html">No-Code / Dev</a>
+      <a class="world-chip reveal" href="worlds/vibe-lab.html">Vibe Coding</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-left">
+        <span class="footer-logo">Adunola<span class="logo-dot">.</span></span>
+        <p>Product Designer · Vibe Coder · Based in Lagos, Nigeria</p>
+        <a href="mailto:Adunoladiya@gmail.com" class="footer-email">Adunoladiya@gmail.com</a>
       </div>
-      <div class="footer-nav-group">
-        <div class="footer-nav-title">Navigate</div>
-        <ul class="footer-nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#music">Music</a></li>
-          <li><a href="#videos">Videos</a></li>
-          <li><a href="#shows">Shows</a></li>
-        </ul>
+      <div class="footer-links">
+        <h4>Worlds</h4>
+        <a href="worlds/uiux.html">UI/UX Design</a>
+        <a href="worlds/graphic.html">Graphic Design</a>
+        <a href="worlds/nocode.html">No-Code / Dev</a>
+        <a href="worlds/vibe-lab.html">Vibe Coding</a>
       </div>
-      <div class="footer-nav-group">
-        <div class="footer-nav-title">Stream</div>
-        <ul class="footer-nav-links">
-          <li><a href="https://open.spotify.com/track/2Qhw9dALw3G4tDysNQ5asZ" target="_blank">Spotify</a></li>
-          <li><a href="https://music.apple.com/us/artist/andrestylez/1655155158" target="_blank">Apple Music</a></li>
-          <li><a href="https://audiomack.com/Andrestylez" target="_blank">Audiomack</a></li>
-          <li><a href="https://unitedmasters.com/m/-2485" target="_blank">All Platforms</a></li>
-        </ul>
-      </div>
-      <div class="footer-nav-group">
-        <div class="footer-nav-title">Legal</div>
-        <ul class="footer-nav-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-        </ul>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <a href="https://x.com/Nolagraphics_" target="_blank">Twitter / X</a>
+        <a href="https://youtube.com/NolaDesigns-s5z" target="_blank">YouTube</a>
+        <a href="http://wa.me/+2347088448530" target="_blank">WhatsApp</a>
+        <a href="https://kiyomigroups.framer.website" target="_blank">Framer Site</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 Andrestylez. All rights reserved.</span>
-      <span class="footer-copy">Lagos, Nigeria · Independent.</span>
+      <span>2025 Adunola Babadiya. All rights reserved.</span>
+      <span>Designed and built by Adunola.</span>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="assets/js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
